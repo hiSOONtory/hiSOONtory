@@ -45,6 +45,7 @@ AI를 활용해 교육 현장에서 필요한 아이디어를
 ![Claude](https://img.shields.io/badge/Claude-000000?style=flat-square&logo=claude&logoColor=white)
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-74aa9c?style=flat-square&logo=openai&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
 
 ---
 

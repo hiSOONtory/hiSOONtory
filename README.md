@@ -1,16 +1,17 @@
 ## Hi there 👋
 
-<!--
-**hiSOONtory/hiSOONtory** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**역사 수업은 더 생생하게, 선생님의 업무는 더 가볍게.**  
+**교육을 위한 콘텐츠와 도구를 만드는 역사교사**
 
-Here are some ideas to get you started:
+### 🔭 What I Do
+- 🤖 AI를 활용해 역사 교육 콘텐츠를 만듭니다.
+- 🛠️ 선생님의 수업과 업무를 돕는 프로그램을 만듭니다.
+- 📚 역사 수업에 필요한 다양한 디지털 자료와 도구를 개발합니다.
+- 🚀 직접 만든 교육용 도구를 실제 교실에 적용하고 배포합니다.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 💡 My Focus
+**History × AI × EdTech**
+
+선생님이 더 중요한 일에 집중할 수 있도록,  
+반복적인 업무는 기술로 덜어내고  
+역사 수업은 더 생생하게 만드는 것을 고민합니다.

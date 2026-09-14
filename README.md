@@ -27,6 +27,7 @@
 - 📖 **자율자치 독서**
   - [바로가기](https://read-your-book.sanclarej.workers.dev/)
 - ⏰ **마감요정** — Brity Messenger 연동
+  - [설치 안내서](https://claude.ai/code/artifact/d8e1d86e-16bc-4e82-8238-cfcfc86abab3)
 - 📚 **진로독서** — Coming Soon
 
 ---

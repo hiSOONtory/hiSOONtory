@@ -31,6 +31,8 @@
   - [설치 안내서](https://hisoontory.github.io/deadline-fairy-release/install.html)
   - [기능 설명서](https://hisoontory.github.io/deadline-fairy-release/features.html)
 - 📐 **추정분할점수 계산기** — 성취평가제(A~E) 추정분할점수 산출 + 사용법 설명서
+  - [바로가기](https://bunhwal-calculator.pages.dev/)
+  - [사용법](https://bunhwal-calculator.pages.dev/guide)
   - [저장소](https://github.com/hiSOONtory/bunhwal-calculator)
 - 📚 **진로독서** — Coming Soon
 

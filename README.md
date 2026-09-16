@@ -34,7 +34,7 @@
   - [바로가기](https://bunhwal-calculator.pages.dev/)
   - [사용법](https://bunhwal-calculator.pages.dev/guide)
 - 🎓 **당신의 입시** — 5등급제 세대 고1~고3 담임을 위한 진학지도 도우미(계속 개발중!)
-  - [바로가기](https://github.com/hiSOONtory/your_ipsi)
+  - [바로가기](https://hisoontory.github.io/your_ipsi/)
 - 📚 **진로독서** — Coming Soon
 
 ---

@@ -33,6 +33,8 @@
 - 📐 **추정분할 계산기** — 성취평가제(A~E) 추정분할점수 산출 + 사용법 설명서
   - [바로가기](https://bunhwal-calculator.pages.dev/)
   - [사용법](https://bunhwal-calculator.pages.dev/guide)
+- 🎓 **당신의 입시** — 5등급제 세대 고1~고3 담임을 위한, 서버 없이 동작하는 단일 HTML 진학지도 도구
+  - [바로가기](https://github.com/hiSOONtory/your_ipsi)
 - 📚 **진로독서** — Coming Soon
 
 ---

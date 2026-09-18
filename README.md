@@ -35,6 +35,7 @@
   - [사용법](https://bunhwal-calculator.pages.dev/guide)
 - 🩺 **모의고사 처방전** — 전국연합학력평가 성적을 누적해 반복되는 약점과 과목별 처방을 A4 1장으로 뽑아주는 상담 도구
   - [바로가기](https://exam-rx.pages.dev/)
+  - [사용법](https://exam-rx.pages.dev/guide)
 - 🎓 **당신의 입시** — 5등급제 세대 고1~고3 담임을 위한 진학지도 도우미(계속 개발중!)
   - [바로가기](https://hisoontory.github.io/your_ipsi/)
 - 📚 **진로독서** — Coming Soon

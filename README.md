@@ -39,7 +39,13 @@
   - [업데이트 소식](https://exam-rx.pages.dev/updates)
 - 🎓 **당신의 입시** — 5등급제 세대 고1~고3 담임을 위한 진학지도 도우미(계속 개발중!)
   - [바로가기](https://hisoontory.github.io/your_ipsi/)
-- 📚 **진로독서** — Coming Soon
+- 📝 **진로 1일 1문답** — 매일 한 문항씩 진로 질문에 답하고 제출
+  - [바로가기](https://white-firefly-4c4d.sanclarej.workers.dev/)
+- 📚 **진로독서 탐구 활동지** — 한 권의 책, 하나의 질문
+  - [바로가기](https://yellow-moon-2512.sanclarej.workers.dev/)
+
+> ⚠️ 위 두 페이지는 **제출하기**를 누르면 제작자(정수훈)의 구글 계정으로 제출됩니다.  
+> 필요하면 브리티 메신저로 **정수훈(성안고)** 에게 연락 주세요.
 
 ---
 

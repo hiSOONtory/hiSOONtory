@@ -18,7 +18,7 @@
   - [바로가기](https://gerrymandering.pages.dev/)
 
 - 📜 **고등학교 한국사1 전근대사 상소문(정책 제안서) 작성 활동지** — 세특 연계 활동
-  - [바로가기](https://sangso.sanclarej.workers.dev/)
+  - [바로가기](https://sangso.hisoontory.workers.dev/)
 
 ### 🧑‍🏫 선생님 업무 지원
 
@@ -28,7 +28,7 @@
 - 📚 **진로 도서 검색기**
   - [바로가기](https://hs-books-do1.pages.dev/)
 - 📖 **자율자치 독서**
-  - [바로가기](https://read-your-book.sanclarej.workers.dev/)
+  - [바로가기](https://read-your-book.hisoontory.workers.dev/)
 - ⏰ **마감요정** — Brity Messenger 연동
   - [바로가기](https://github.com/hiSOONtory/deadline-fairy-release)
   - [설치 안내서](https://hisoontory.github.io/deadline-fairy-release/install.html)
@@ -43,9 +43,9 @@
 - 🎓 **당신의 입시** — 5등급제 세대 고1~고3 담임을 위한 진학지도 도우미(계속 개발중!)
   - [바로가기](https://hisoontory.github.io/your_ipsi/)
 - 📝 **진로 1일 1문답** — 매일 한 문항씩 진로 질문에 답하고 제출
-  - [바로가기](https://white-firefly-4c4d.sanclarej.workers.dev/)
+  - [바로가기](https://white-firefly-4c4d.hisoontory.workers.dev/)
 - 📚 **진로독서 탐구 활동지** — 한 권의 책, 하나의 질문
-  - [바로가기](https://yellow-moon-2512.sanclarej.workers.dev/)
+  - [바로가기](https://yellow-moon-2512.hisoontory.workers.dev/)
 
 ---
 

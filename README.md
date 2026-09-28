@@ -15,7 +15,7 @@
   - [학생용](https://hisoontory-1910s-map.pages.dev/)
 
 - 🗺️ **고등학교 한국사 1910–1945 독립운동 흐름 지도** — 미래엔 한국사2 교과서 기반, 시기별 사건과 이동 경로
-  - [바로가기](https://independence-map.pages.dev/)
+  - [바로가기](https://independence-map.hisoontory.workers.dev/)
 
 - 🌍 **고1 통합사회 1-1-3 게리맨더링**
   - [바로가기](https://gerrymandering.pages.dev/)

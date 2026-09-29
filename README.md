@@ -20,6 +20,9 @@
 - 🌍 **고1 통합사회 1-1-3 게리맨더링**
   - [바로가기](https://gerrymandering.pages.dev/)
 
+- 🌍 **고3 역사로 탐구하는 현대세계 글로벌 이슈의 원인을 찾아서** - 법정의 문이 열리다 게임을 통해 세계 시민 의식을 길러봅니다
+  - [바로가기](https://counter-advocate.hisoontory.workers.dev/)
+ 
 - 📜 **고등학교 한국사1 전근대사 상소문(정책 제안서) 작성 활동지** — 세특 연계 활동
   - [바로가기](https://sangso.hisoontory.workers.dev/)
 

@@ -10,20 +10,20 @@
 역사와 사회를 더 쉽게 탐색하고 이해할 수 있는  
 인터랙티브 교육 콘텐츠를 만듭니다.
 
-- 🇰🇷 **고등학교 한국사 1910년대 국내외 독립운동 기지 인터랙티브 맵**
+- 🇰🇷 **고등학교 한국사2 '1910년대 국내외 독립 운동 기지 인터랙티브 맵'**
   - [교사용](https://1910-teachers.pages.dev/)
   - [학생용](https://hisoontory-1910s-map.pages.dev/)
 
-- 🗺️ **고등학교 한국사 1910–1945 독립운동 흐름 지도** — 미래엔 한국사2 교과서 기반, 시기별 사건과 이동 경로
+- 🗺️ **고등학교 한국사2 '1910–1945 독립 운동 흐름 지도'** — 미래엔 한국사2 교과서 기반, 시기별 사건과 이동 경로를 확인해봅니다.
   - [바로가기](https://independence-map.hisoontory.workers.dev/)
 
-- 🌍 **고1 통합사회 1-1-3 게리맨더링**
+- 🌍 **고1 통합사회2 '선거구 법정주의와 게리맨더링'**
   - [바로가기](https://gerrymandering.pages.dev/)
 
-- 🌍 **고3 역사로 탐구하는 현대세계 글로벌 이슈의 원인을 찾아서** - 법정의 문이 열리다 게임을 통해 세계 시민 의식을 길러봅니다
+- 🌍 **고3 역사로 탐구하는 현대세계 '글로벌 이슈의 원인을 찾아서'** - '법정의 문이 열리다' 게임을 통해 세계 시민 의식을 길러봅니다.
   - [바로가기](https://counter-advocate.hisoontory.workers.dev/)
  
-- 📜 **고등학교 한국사1 전근대사 상소문(정책 제안서) 작성 활동지** — 세특 연계 활동
+- 📜 **고등학교 한국사1 '나만의 상소문(정책 제안서)' 작성 활동지** — 세특 연계 활동
   - [바로가기](https://sangso.hisoontory.workers.dev/)
 
 ### 🧑‍🏫 선생님 업무 지원
@@ -33,23 +33,30 @@
 
 - 📚 **진로 도서 검색기**
   - [바로가기](https://hs-books-do1.pages.dev/)
+    
 - 📖 **자율자치 독서**
   - [바로가기](https://read-your-book.hisoontory.workers.dev/)
+    
 - ⏰ **마감요정** — Brity Messenger 연동
   - [바로가기](https://github.com/hiSOONtory/deadline-fairy-release)
   - [설치 안내서](https://hisoontory.github.io/deadline-fairy-release/install.html)
   - [기능 설명서](https://hisoontory.github.io/deadline-fairy-release/features.html)
+    
 - 📐 **추정분할 계산기** — 성취평가제(A~E) 추정분할점수 산출 + 사용법 설명서
   - [바로가기](https://bunhwal-calculator.pages.dev/)
   - [사용법](https://bunhwal-calculator.pages.dev/guide)
+    
 - 🩺 **모의고사 처방전** — 전국연합학력평가 성적을 누적해 반복되는 약점과 과목별 처방을 A4 1장으로 뽑아주는 상담 도구
   - [바로가기](https://exam-rx.pages.dev/)
   - [사용법](https://exam-rx.pages.dev/guide)
   - [업데이트 소식](https://exam-rx.pages.dev/updates)
+    
 - 🎓 **당신의 입시** — 5등급제 세대 고1~고3 담임을 위한 진학지도 도우미(계속 개발중!)
   - [바로가기](https://hisoontory.github.io/your_ipsi/)
+    
 - 📝 **진로 1일 1문답** — 매일 한 문항씩 진로 질문에 답하고 제출
   - [바로가기](https://white-firefly-4c4d.hisoontory.workers.dev/)
+ 
 - 📚 **진로독서 탐구 활동지** — 한 권의 책, 하나의 질문
   - [바로가기](https://yellow-moon-2512.hisoontory.workers.dev/)
 

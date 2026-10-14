@@ -39,7 +39,7 @@
     
 - 🪑 **우리 반 자리 뽑기** — 교우관계·위치 조건을 반영해 미리 정한 자리를 TV에서 뽑기 연출로 공개
   - [바로가기](https://seat-draw-bwa.pages.dev/)
-  - [사용법](https://seat-draw-bwa.pages.dev/guide.html)
+  - [사용법](https://seat-draw-bwa.pages.dev/guide)
     
 - ⏰ **마감요정** — Brity Messenger 연동
   - [바로가기](https://github.com/hiSOONtory/deadline-fairy-release)

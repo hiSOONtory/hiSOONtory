@@ -20,6 +20,12 @@
 - 🗺️ **고등학교 한국사2 '1910–1945 독립 운동 흐름 지도'** — 미래엔 한국사2 교과서 기반, 시기별 사건과 이동 경로를 확인해봅니다.
   - [바로가기](https://independence-map.hisoontory.workers.dev/)
 
+- 🕊️ **고등학교 한국사2 '광복에서 정부 수립까지'** — 1945.8~1948.10 좌익·우익·좌우 합작 흐름을 사건 20개로 따라가는 연표 모션그래픽
+  - [바로가기](https://liberation-to-government.hisoontory.workers.dev/)
+
+- 🪖 **고등학교 한국사2 '6·25 전쟁 전황 3D 지도'** — 3D 지형 위에서 시기별 전선 이동과 주요 전투를 따라가는 전황 지도
+  - [바로가기](https://korean-war-3d-map.hisoontory.workers.dev/)
+
 - 🌍 **고1 통합사회2 '선거구 법정주의와 게리맨더링'**
   - [바로가기](https://gerrymandering.hisoontory.workers.dev/)
 

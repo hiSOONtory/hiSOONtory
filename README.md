@@ -25,6 +25,7 @@
 
 - 🪖 **고등학교 한국사2 '6·25 전쟁 전황 3D 지도'** — 3D 지형 위에서 시기별 전선 이동과 주요 전투를 따라가는 전황 지도
   - [바로가기](https://korean-war-3d-map.hisoontory.workers.dev/)
+  - [사용법](https://korean-war-3d-map.hisoontory.workers.dev/guide)
 
 - 🌍 **고등학교 통합사회2 '선거구 법정주의와 게리맨더링'**
   - [바로가기](https://gerrymandering.hisoontory.workers.dev/)

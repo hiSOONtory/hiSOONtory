@@ -58,7 +58,10 @@
   - [기능 설명서](https://hisoontory.github.io/deadline-fairy-release/features.html)
     
 - 📺 **교사 대시보드** — Lively Wallpaper로 바탕화면에 띄우는 시간표·진도·출결·마감 업무·학사일정 대시보드 (마감요정 연동 설명서 포함)
-  - [바로가기](https://github.com/hiSOONtory/teacher-desk)
+  - [바로가기](https://teacher-desk.hisoontory.workers.dev)
+  - [설치 설명서](https://teacher-desk.hisoontory.workers.dev/설치_설명서)
+  - [마감요정 연동 설명서](https://teacher-desk.hisoontory.workers.dev/마감요정_연동_설명서)
+  - [GitHub](https://github.com/hiSOONtory/teacher-desk)
     
 - 📐 **추정분할 계산기** — 성취평가제(A~E) 추정분할점수 산출 + 사용법 설명서
   - [바로가기](https://hisoontory.github.io/bunhwal-calculator/)

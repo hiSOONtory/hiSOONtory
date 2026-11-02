@@ -57,6 +57,11 @@
   - [설치 안내서](https://hisoontory.github.io/deadline-fairy-release/install.html)
   - [기능 설명서](https://hisoontory.github.io/deadline-fairy-release/features.html)
     
+- ✅ **생기부 점검기** — 나이스 엑셀을 넣으면 기재요령 위반·오타·글자수를 자동 점검 (설치 없는 HTML 한 장, 외부 전송 없음)
+  - 🧑‍🏫 **담임용** — [점검기](https://saenggibu-checker.pages.dev/점검기.html)
+  - 🧭 **업무 담당자용** — [현황판](https://saenggibu-checker.pages.dev/현황판.html)
+  - [사용설명서](https://saenggibu-checker.pages.dev/사용설명서.html)
+    
 - 📺 **교사 대시보드** — Lively Wallpaper로 바탕화면에 띄우는 시간표·진도·출결·마감 업무·학사일정 대시보드 (마감요정 연동 설명서 포함)
   - [바로가기](https://teacher-desk.hisoontory.workers.dev)
   - [설치 설명서](https://teacher-desk.hisoontory.workers.dev/설치_설명서)

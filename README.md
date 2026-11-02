@@ -81,6 +81,10 @@
 - 📚 **진로독서 탐구 활동지** — 한 권의 책, 하나의 질문
   - [바로가기](https://yellow-moon-2512.hisoontory.workers.dev/)
 
+- 🔍 **생기부 점검기** — 나이스 엑셀을 넣으면 기재요령 위반·오타·글자수(Byte)를 규칙 기반으로 점검 (설치 없이 HTML 한 장, 인터넷 전송·AI 없음)
+  - [바로가기](https://saenggibu-checker.pages.dev/점검기.html)
+  - [사용설명서](https://saenggibu-checker.pages.dev/사용설명서.html)
+  
 ---
 
 ### 🤖 AI × Education

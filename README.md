@@ -80,6 +80,10 @@
   - [사용법](https://exam-rx.hisoontory.workers.dev/guide)
   - [업데이트 소식](https://exam-rx.hisoontory.workers.dev/updates)
     
+- 📨 **출결 알림 (e알리미 연동)** — 지각·조퇴·결과·미등교 상황을 클릭 몇 번으로 보호자 안내 문구로 만들고, 복사와 함께 e알리미 문자 보내기 화면을 열어 주는 담임용 도구 (**e알리미 사용 학교 전용**, 설치 없는 HTML 한 장, 외부 전송 없음)
+  - [바로가기](https://hisoontory.github.io/attendance-notice/)
+  - [사용법](https://github.com/hiSOONtory/attendance-notice#readme)
+    
 - 🎓 **당신의 입시** — 5등급제 세대 고1~고3 담임을 위한 진학지도 도우미(계속 개발중!)
   - [바로가기](https://hisoontory.github.io/your_ipsi/)
     

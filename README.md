@@ -28,6 +28,9 @@
   - [바로가기](https://korean-war-3d-map.hisoontory.workers.dev/)
   - [사용법](https://korean-war-3d-map.hisoontory.workers.dev/guide)
 
+- 🗳️ **고등학교 한국사2 '점으로 보는 대한민국 선거사'** — 1948~2025년 대통령·국회의원 선거와 북한 국가주석 선거 48개를 점이 움직이는 모션그래픽으로 보여 줍니다. 투표율, 국회 의석 배치도, 용어 풀이까지 담았어요. (미디어와 역사수업 실천 모임)
+  - [바로가기](https://korea-elections.pages.dev/)
+
 - 🌍 **고등학교 통합사회2 '선거구 법정주의와 게리맨더링'**
   - [바로가기](https://gerrymandering.hisoontory.workers.dev/)
 

@@ -74,7 +74,6 @@
   - [마감요정 연동판 받기 (zip)](https://teacher-desk.hisoontory.workers.dev/teacher-desk-magam-lively.zip)
   - [설치 설명서](https://teacher-desk.hisoontory.workers.dev/설치_설명서)
   - [마감요정 연동 설명서](https://teacher-desk.hisoontory.workers.dev/마감요정_연동_설명서)
-  - [GitHub](https://github.com/hiSOONtory/teacher-desk)
     
 - 📐 **추정분할 계산기** — 성취평가제(A~E) 추정분할점수 산출 + 사용법 설명서
   - [바로가기](https://hisoontory.github.io/bunhwal-calculator/)

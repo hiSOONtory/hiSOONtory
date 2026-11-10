@@ -68,8 +68,10 @@
   - [바로가기](https://saenggibu-checker.pages.dev/현황판.html)
   - [사용설명서](https://saenggibu-checker.pages.dev/사용설명서.html)
     
-- 📺 **교사 대시보드** — Lively Wallpaper로 바탕화면에 띄우는 시간표·진도·출결·마감 업무·학사일정 대시보드 (마감요정 연동 설명서 포함)
+- 📺 **교사 대시보드** — Lively Wallpaper로 바탕화면에 띄우는 시간표·진도·출결·마감 업무·학사일정 대시보드. 받은 zip 파일을 압축 풀지 않고 Lively 창에 끌어다 놓으면 바로 설치돼요 (마감요정 연동판·연동 설명서 포함)
   - [바로가기](https://teacher-desk.hisoontory.workers.dev)
+  - [기본판 받기 (zip)](https://teacher-desk.hisoontory.workers.dev/teacher-desk-lively.zip)
+  - [마감요정 연동판 받기 (zip)](https://teacher-desk.hisoontory.workers.dev/teacher-desk-magam-lively.zip)
   - [설치 설명서](https://teacher-desk.hisoontory.workers.dev/설치_설명서)
   - [마감요정 연동 설명서](https://teacher-desk.hisoontory.workers.dev/마감요정_연동_설명서)
   - [GitHub](https://github.com/hiSOONtory/teacher-desk)

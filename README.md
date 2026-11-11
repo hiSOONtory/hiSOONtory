@@ -11,7 +11,6 @@
 인터랙티브 교육 콘텐츠를 만듭니다.
 
 - 🌊 **독도 수호대 – 시간을 건너는 증거** — 512년 신라부터 1953년의 독도의용수비대까지, 16장의 사료 카드를 수집해 억지 주장을 논파하는 퍼즐·배틀·논술 결합형 웹게임
-
   - [바로가기](https://guardians-of-dokdo.hisoontory.workers.dev/)
 
 - 🇰🇷 **고등학교 한국사2 '1910년대 국내외 독립 운동 기지 인터랙티브 맵'**
@@ -40,25 +39,45 @@
 - 📜 **고등학교 한국사1 '나만의 상소문(정책 제안서)' 작성 활동지** — 생기부 작성 연계 활동
   - [바로가기](https://sangso.hisoontory.workers.dev/)
 
+- 📜 **고등학교 한국사2 '역사 사건 사료 탐구' 작성 활동지** — 생기부 작성 연계 활동
+  - [바로가기](https://4ryo-tham9.hisoontory.workers.dev/)
+
 ### 🧑‍🏫 선생님 업무 지원
 
 선생님의 수업과 업무, 학급 활동을 돕는  
 다양한 교육용 도구를 만듭니다.
 
-- 📚 **진로 도서 검색기**
-  - [바로가기](https://hs-books-do1.hisoontory.workers.dev/)
-    
-- 📖 **자율자치 독서**
-  - [바로가기](https://read-your-book.hisoontory.workers.dev/)
-    
-- 🪑 **우리 반 자리 뽑기** — 교우관계·위치 조건을 반영해 미리 정한 자리를 TV에서 뽑기 연출로 공개
-  - [바로가기](https://seat-draw-bwa.hisoontory.workers.dev/)
-  - [사용법](https://seat-draw-bwa.hisoontory.workers.dev/guide)
-    
-- ⏰ **마감요정** — Brity Messenger 연동
+- 📺 **담임교사 대시보드** — Lively Wallpaper로 바탕화면에 띄우는 시간표·진도·출결·마감 업무·학사일정 대시보드. 받은 zip 파일을 압축 풀지 않고 Lively 창에 끌어다 놓으면 바로 설치돼요!
+  - [바로가기](https://teacher-desk.hisoontory.workers.dev)
+  - [기본판 받기 (zip)](https://teacher-desk.hisoontory.workers.dev/teacher-desk-lively.zip)
+  - [마감요정 연동판 받기 (zip)](https://teacher-desk.hisoontory.workers.dev/teacher-desk-magam-lively.zip)
+  - [설치 설명서](https://teacher-desk.hisoontory.workers.dev/설치_설명서)
+  - [마감요정 연동 설명서](https://teacher-desk.hisoontory.workers.dev/마감요정_연동_설명서)
+
+- ⏰ **마감요정** — 깔아만 두세요. 마감요정이 마감이 언젠지 알려드려요!(Brity Messenger 전용)
   - [바로가기](https://github.com/hiSOONtory/deadline-fairy-release)
   - [설치 안내서](https://hisoontory.github.io/deadline-fairy-release/install.html)
   - [기능 설명서](https://hisoontory.github.io/deadline-fairy-release/features.html)
+
+- 🩺 **모의고사 처방전** — 전국연합학력평가 성적을 누적해 반복되는 약점과 과목별 처방을 A4 1장으로 뽑아주는 상담 도구
+  - [바로가기](https://exam-rx.hisoontory.workers.dev/)
+  - [사용법](https://exam-rx.hisoontory.workers.dev/guide)
+  - [업데이트 소식](https://exam-rx.hisoontory.workers.dev/updates)
+    
+- 📨 **출결 알림 (e알리미 연동)** — 지각·조퇴·결과·미등교 상황을 클릭 몇 번으로 보호자 안내 문구로 만들고, 복사와 함께 e알리미 문자 보내기 화면을 열어 주는 담임용 도구 (**e알리미 사용 학교 전용**, 설치 없는 HTML 한 장, 외부 전송 없음)
+  - [바로가기](https://hisoontory.github.io/attendance-notice/)
+  - [사용법](https://github.com/hiSOONtory/attendance-notice#readme)
+
+- 📐 **추정분할 계산기** — 성취평가제(A~E) 추정분할점수 산출 + 사용법 설명서
+  - [바로가기](https://hisoontory.github.io/bunhwal-calculator/)
+  - [사용법](https://hisoontory.github.io/bunhwal-calculator/guide)
+
+- 🪑 **우리 반 자리 뽑기** — 교우관계·위치 조건을 반영해 미리 정한 자리를 TV에서 뽑기 연출로 공개
+  - [바로가기](https://seat-draw-bwa.hisoontory.workers.dev/)
+  - [사용법](https://seat-draw-bwa.hisoontory.workers.dev/guide)
+
+- 📚 **진로 도서 검색기** 무슨 책을 읽어야 할 지 잘 모르겠다면, 검색부터 해봐요!
+  - [바로가기](https://hs-books-do1.hisoontory.workers.dev/)
     
 - 🧑‍🏫 **생기부 점검기 (담임용)** — 나이스 엑셀을 넣으면 기재요령 위반·오타·글자수(Byte)를 규칙 기반으로 점검하고, 점검 결과 파일을 저장해 제출 (설치 없는 HTML 한 장, 외부 전송·AI 없음)
   - [바로가기](https://saenggibu-checker.pages.dev/점검기.html)
@@ -68,34 +87,17 @@
   - [바로가기](https://saenggibu-checker.pages.dev/현황판.html)
   - [사용설명서](https://saenggibu-checker.pages.dev/사용설명서.html)
     
-- 📺 **교사 대시보드** — Lively Wallpaper로 바탕화면에 띄우는 시간표·진도·출결·마감 업무·학사일정 대시보드. 받은 zip 파일을 압축 풀지 않고 Lively 창에 끌어다 놓으면 바로 설치돼요 (마감요정 연동판·연동 설명서 포함)
-  - [바로가기](https://teacher-desk.hisoontory.workers.dev)
-  - [기본판 받기 (zip)](https://teacher-desk.hisoontory.workers.dev/teacher-desk-lively.zip)
-  - [마감요정 연동판 받기 (zip)](https://teacher-desk.hisoontory.workers.dev/teacher-desk-magam-lively.zip)
-  - [설치 설명서](https://teacher-desk.hisoontory.workers.dev/설치_설명서)
-  - [마감요정 연동 설명서](https://teacher-desk.hisoontory.workers.dev/마감요정_연동_설명서)
-    
-- 📐 **추정분할 계산기** — 성취평가제(A~E) 추정분할점수 산출 + 사용법 설명서
-  - [바로가기](https://hisoontory.github.io/bunhwal-calculator/)
-  - [사용법](https://hisoontory.github.io/bunhwal-calculator/guide)
-    
-- 🩺 **모의고사 처방전** — 전국연합학력평가 성적을 누적해 반복되는 약점과 과목별 처방을 A4 1장으로 뽑아주는 상담 도구
-  - [바로가기](https://exam-rx.hisoontory.workers.dev/)
-  - [사용법](https://exam-rx.hisoontory.workers.dev/guide)
-  - [업데이트 소식](https://exam-rx.hisoontory.workers.dev/updates)
-    
-- 📨 **출결 알림 (e알리미 연동)** — 지각·조퇴·결과·미등교 상황을 클릭 몇 번으로 보호자 안내 문구로 만들고, 복사와 함께 e알리미 문자 보내기 화면을 열어 주는 담임용 도구 (**e알리미 사용 학교 전용**, 설치 없는 HTML 한 장, 외부 전송 없음)
-  - [바로가기](https://hisoontory.github.io/attendance-notice/)
-  - [사용법](https://github.com/hiSOONtory/attendance-notice#readme)
-    
 - 🎓 **당신의 입시** — 5등급제 세대 고1~고3 담임을 위한 진학지도 도우미(계속 개발중!)
   - [바로가기](https://hisoontory.github.io/your_ipsi/)
     
-- 📝 **진로 1일 1문답** — 매일 한 문항씩 진로 질문에 답하고 제출
+- 📝 **나는 누구인가? 진로 1일 1문답** — 매일 한 문항씩 진로 질문에 답하고 제출하며 자신의 특성을 파악해봅니다.
   - [바로가기](https://white-firefly-4c4d.hisoontory.workers.dev/)
  
 - 📚 **진로독서 탐구 활동지** — 한 권의 책, 하나의 질문
   - [바로가기](https://yellow-moon-2512.hisoontory.workers.dev/)
+
+- 📖 **자율자치 독서 활동지** — 한 권의 책과 함께하는 학급특색활동
+  - [바로가기](https://read-your-book.hisoontory.workers.dev/)
 
 ---
 

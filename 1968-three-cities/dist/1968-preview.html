@@ -21,6 +21,7 @@
   --sign: 'Do Hyeon', 'Black Han Sans', 'Malgun Gothic', sans-serif;
   --press: 'Nanum Myeongjo', 'Batang', 'AppleMyungjo', serif;
   --typer: 'Nanum Gothic Coding', 'D2Coding', ui-monospace, monospace;
+  --read: 'IBM Plex Sans KR', 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
   --hand: 'Nanum Pen Script', 'Nanum Myeongjo', cursive;
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .2 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
 }
@@ -78,9 +79,9 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 /* 상단: 신문 제호 띠 */
 [data-era="1968"] #topbar { color: var(--ink); background: var(--grain), var(--paper); border-bottom: 5px double var(--ink); }
-[data-era="1968"] #caption { font-family: var(--press); font-weight: 800; font-size: 1.3em; letter-spacing: .02em; }
+[data-era="1968"] #caption { font-size: 1.25em; }
 [data-era="1968"] #progress { font-family: var(--typer); font-size: .9em; }
-[data-era="1968"] #topbar button { padding: .15em .9em; font-family: var(--sign); font-size: 1.1em; background: var(--paper-2); border: 2px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); }
+[data-era="1968"] #topbar button { padding: .15em .9em; font-weight: 700; background: var(--paper-2); border: 2px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); }
 [data-era="1968"] #topbar button:hover { background: var(--ink); color: var(--paper); }
 [data-era="1968"] #nb-count { display: inline-block; min-width: 1.5em; margin-left: .2em; font-weight: 400; color: var(--paper); background: var(--accent); border-radius: 50%; text-align: center; }
 
@@ -120,10 +121,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
 [data-era="1968"] #dialog::after { content: ''; position: absolute; inset: 7px -7px -7px 7px; z-index: -1; background: var(--accent); filter: url(#rough); }
 [data-era="1968"] #dialog.ph::before { outline: 2px dashed var(--ink); outline-offset: -8px; }
 [data-era="1968"] #speaker { top: -1em; font: 400 .95em var(--sign); letter-spacing: .06em; color: var(--paper); background: var(--ink); transform: rotate(-2deg); box-shadow: 3px 3px 0 var(--accent); }
-[data-era="1968"] #text { font-family: var(--press); font-weight: 700; font-size: 1.04em; }
-[data-era="1968"] #dialog[data-kind="narration"] #text { font: .92em/1.7 var(--typer); color: #2e2a23; }
-[data-era="1968"] #dialog[data-kind="thought"] #text { font: 1.5em/1.25 var(--hand); color: var(--pen); }
-[data-era="1968"] #dialog[data-kind="thought"] #speaker { font-family: var(--hand); font-size: 1.15em; color: var(--pen); background: var(--paper-2); box-shadow: none; border-bottom: 2px solid var(--pen); }
+[data-era="1968"] #text { font-weight: 500; line-height: 1.6; color: #14110c; }
+[data-era="1968"] #dialog[data-kind="narration"] #text { font-weight: 400; color: #3a342a; }
+[data-era="1968"] #dialog[data-kind="thought"] #text { font-style: italic; color: var(--pen); }
+[data-era="1968"] #dialog[data-kind="thought"] #speaker { color: var(--pen); background: var(--paper-2); box-shadow: none; border-bottom: 2px solid var(--pen); }
 [data-era="1968"] #more { color: var(--accent); }
 
 /* 선택지: 벽에 붙인 전단 */
@@ -132,7 +133,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 #choices button {
   position: relative; display: flex; flex-direction: column; align-items: center; gap: .3em;
   width: min(29%, 15em); min-height: 8.6em; padding: 1.5em .9em 1em; text-align: center;
-  font: 1.08em/1.3 var(--sign); background: var(--grain), var(--paper-2); border: 0; box-shadow: 0 .5em 1.2em #000a; transition: transform .15s;
+  font: 700 1em/1.4 var(--read); background: var(--grain), var(--paper-2); border: 0; box-shadow: 0 .5em 1.2em #000a; transition: transform .15s;
 }
 #choices button::before { content: ''; position: absolute; top: -.6em; left: 50%; width: 4.4em; height: 1.2em; margin-left: -2.2em; background: #e6d48fcc; transform: rotate(-3deg); box-shadow: 0 1px 2px #0004; }
 #choices button:nth-of-type(3n+1) { transform: rotate(-2.2deg); }
@@ -216,13 +217,13 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .card-kicker { position: absolute; top: .7em; right: .9em; display: flex; gap: .5em; font: 1em var(--poster); color: var(--accent); transform: rotate(4deg); filter: url(#ink); }
 .card-kicker, .card-kicker b { padding: 0 .5em; border: 3px solid var(--accent); font-weight: 400; }
 .card-kicker b { border: 0; padding: 0; }
-.card-text { margin: 1em 0 .5em; font: 700 1.1em/1.6 var(--press); }
-.card.pending .card-text { font: .9em/1.7 var(--typer); }
-.card-desc, .card-cite { margin: .3em 0 0; font: .68em/1.6 var(--typer); }
+.card-text { margin: 1em 0 .5em; font: 600 1.05em/1.6 var(--read); }
+.card.pending .card-text { font-weight: 400; }
+.card-desc, .card-cite { margin: .3em 0 0; font: .74em/1.6 var(--read); }
 .card-cite { padding-top: .4em; border-top: 1px solid #0004; opacity: .8; }
-.list .log { margin: .5em 0; font: 700 .85em var(--press); }
+.list .log { margin: .5em 0; font: 500 .85em/1.6 var(--read); }
 .list .log b { margin-right: .7em; padding: 0 .5em; font: 400 1em var(--sign); color: var(--paper); background: var(--ink); }
-.empty { font: .8em var(--typer); opacity: .7; }
+.empty { font-size: .8em; opacity: .7; }
 
 /* 이유 태그: 고무도장 */
 .reason { text-align: center; }
@@ -243,8 +244,26 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .end-card th, .end-card td { padding: .4em .6em; text-align: left; vertical-align: top; border-bottom: 1px solid #d9dee7; }
 .btn-modern { margin-top: .6em; padding: .4em 1.6em; color: #fff; background: #2f6df6; border: 0; border-radius: 999px; }
 
+/* ── 쌓이는 것: 진행 칸, 알림, 발자취(점수·게이지는 두지 않는다) ── */
+#pips { display: flex; gap: 4px; }
+#pips i { width: .9em; height: .9em; border: 2px solid currentColor; }
+#pips i.done { background: currentColor; }
+#pips i.now { background: var(--accent); border-color: var(--accent); transform: scale(1.25); }
+[data-era="2026"] #pips i { border-radius: 50%; border-color: #9aa5b8; }
+[data-era="2026"] #pips i.done { background: #9aa5b8; }
+[data-era="2026"] #pips i.now { background: #2f6df6; border-color: #2f6df6; }
+#toast { position: absolute; z-index: 6; left: 50%; bottom: 1em; padding: .25em 1.2em; font-size: .8em; font-weight: 700; color: var(--paper-2); background: var(--ink); border: 2px solid var(--paper-2); box-shadow: 4px 4px 0 var(--accent); transform: translateX(-50%); animation: toast 2.4s both; pointer-events: none; }
+@keyframes toast { 0% { opacity: 0; translate: 0 1em; } 12%, 80% { opacity: 1; translate: 0 0; } 100% { opacity: 0; } }
+.trail-stamps { display: grid; grid-template-columns: repeat(6, 1fr); gap: .4em; margin-bottom: 1em; text-align: center; }
+.trail-stamps div { padding: .2em 0; font: 1em var(--sign); color: var(--accent); border: 3px double var(--accent); border-radius: .25em; }
+.trail-stamps div.zero { color: #0005; border-color: #0003; }
+.trail-stamps b { display: block; font: 700 1.3em var(--read); }
+.trail { width: 100%; margin-bottom: 1.4em; border-collapse: collapse; font-size: .78em; }
+.trail th, .trail td { padding: .35em .5em; text-align: left; vertical-align: top; border-bottom: 1px solid #0003; }
+.trail th { white-space: nowrap; }
+
 /* ── 라디오 다이얼: 같은 해, 세 도시 ── */
-#dial { position: relative; display: flex; width: 19em; height: 2.3em; overflow: hidden; font: 700 1.05em/1.45 var(--typer); color: var(--ink); background: linear-gradient(#fbf4da, #dccf9f); border: 2px solid var(--ink); border-radius: 5px; box-shadow: inset 0 0 .5em #0006; }
+#dial { position: relative; display: flex; width: 19em; height: 2.3em; overflow: hidden; font: 700 1em/1.5 var(--read); color: var(--ink); background: linear-gradient(#fbf4da, #dccf9f); border: 2px solid var(--ink); border-radius: 5px; box-shadow: inset 0 0 .5em #0006; }
 #dial::after { content: ''; position: absolute; inset: auto 0 0 0; height: .55em; background: repeating-linear-gradient(90deg, var(--ink) 0 1px, transparent 1px 5px); opacity: .6; }
 #dial i { flex: 1; font-style: normal; text-align: center; opacity: .4; }
 [data-city="PA"] #dial i[data-c="PA"], [data-city="PR"] #dial i[data-c="PR"], [data-city="MX"] #dial i[data-c="MX"] { opacity: 1; font-weight: 700; }
@@ -252,7 +271,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 [data-era="2026"] #dial, [data-era="1968"] #progress { display: none; }
 
 /* 구술 테이프 표시: 지금 보는 장면은 누군가의 기억이다 */
-#memo { position: absolute; z-index: 2; top: .6em; right: .7em; display: flex; align-items: center; gap: .3em; padding: .15em .8em .15em .4em; font: .6em var(--typer); color: var(--paper); background: #17140fd9; border-radius: 3px; }
+#memo { position: absolute; z-index: 2; top: .6em; right: .7em; display: flex; align-items: center; gap: .3em; padding: .15em .8em .15em .4em; font: 500 .66em var(--read); color: var(--paper); background: #17140fd9; border-radius: 3px; }
 #memo i, .reels i { width: 1.3em; height: 1.3em; border: .28em dotted currentColor; border-radius: 50%; animation: spin 3s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 [data-era="2026"] #memo { display: none; }
@@ -273,25 +292,22 @@ button { font: inherit; color: inherit; cursor: pointer; }
    멕시코시티: 등사 전단과 옵아트 동심원 */
 [data-city="PR"] { --paper-2: #f3f3ee; --paper: #e3e4dd; --pen: #2a2f73; }
 [data-era="1968"][data-city="PR"] #text,
-[data-era="1968"][data-city="PR"] #dialog[data-kind="narration"] #text { font: 700 .98em/1.7 var(--typer); color: #2a2f73; text-shadow: .6px .4px 0 #2a2f7366; letter-spacing: .02em; }
-[data-era="1968"][data-city="PR"] #dialog[data-kind="narration"] #text { font-weight: 400; }
+[data-era="1968"][data-city="PR"] #dialog[data-kind="narration"] #text { color: #1f2663; }
 [data-era="1968"][data-city="PR"] #dialog::before { background: var(--grain), linear-gradient(90deg, transparent 3.2em, #c2413a55 3.2em calc(3.2em + 2px), transparent 0), var(--paper-2); }
 [data-era="1968"][data-city="PR"] #dialog { padding-left: 4.4em; }
 [data-era="1968"][data-city="PR"] #speaker { left: 4.2em; font: 700 .9em var(--typer); color: var(--ink); background: var(--paper-2); border: 2px solid var(--ink); box-shadow: none; transform: none; text-transform: uppercase; }
-[data-era="1968"][data-city="PR"] #caption { font-family: var(--typer); font-weight: 700; font-size: 1.1em; }
 [data-city="PR"] #titlecard { color: var(--ink); background: var(--grain), var(--paper-2); }
 [data-city="PR"] .tc-date { color: var(--ink); background: none; border-block: 4px double var(--ink); padding: .3em 3em; }
 [data-city="PR"] .tc-place { font-family: var(--press); font-weight: 800; color: var(--ink); text-shadow: none; }
 [data-city="PR"] .tc-title { background: var(--accent); transform: none; }
-[data-city="PR"] #choices button { font: 700 .95em/1.5 var(--typer); color: #2a2f73; background: var(--grain), var(--paper-2); border-left: 2px solid #c2413a88; text-align: left; align-items: flex-start; }
+[data-city="PR"] #choices button { color: #1f2663; background: var(--grain), var(--paper-2); border-left: 2px solid #c2413a88; text-align: left; align-items: flex-start; }
 [data-city="PR"] #choices button::before { top: -.9em; left: 1.4em; width: .8em; height: 2.4em; margin: 0; background: none; border: 3px solid #8a8f98; border-radius: .5em; transform: rotate(8deg); box-shadow: none; }
 [data-city="PR"] #choices b { font: 700 1.8em var(--typer); color: var(--ink); filter: none; }
 [data-city="PR"] #choices b::after { content: ')'; }
 [data-city="PR"] #choices button span { border-top: 1px dashed #2a2f73; }
 
 [data-city="MX"] { --paper-2: #f6efcf; --paper: #eadfb2; --pen: #4b2a7a; }
-[data-era="1968"][data-city="MX"] #text { font: 400 1.12em/1.5 var(--sign); color: #3c2468; } /* 등사 잉크 */
-[data-era="1968"][data-city="MX"] #dialog[data-kind="narration"] #text { font: .92em/1.7 var(--typer); color: #3c2468; }
+[data-era="1968"][data-city="MX"] #text { color: #33205c; } /* 등사 잉크 */
 [data-era="1968"][data-city="MX"] #dialog::before { background: var(--grain), repeating-linear-gradient(0deg, transparent 0 6px, #3c246809 6px 7px), var(--paper-2); }
 [data-era="1968"][data-city="MX"] #speaker { background: var(--accent); box-shadow: 3px 3px 0 var(--ink); }
 [data-city="MX"] #titlecard { color: var(--ink); background: var(--grain), repeating-radial-gradient(circle at 50% 46%, var(--paper-2) 0 9px, var(--ink) 9px 12px, var(--paper-2) 12px 21px, var(--accent) 21px 24px); }
@@ -345,10 +361,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
     <header id="topbar">
       <span id="progress"></span>
       <span id="dial" aria-hidden="true"><i data-c="PA">파리</i><i data-c="PR">프라하</i><i data-c="MX">멕시코시티</i><b></b></span>
+      <span id="pips" aria-hidden="true"></span>
       <span id="caption"></span>
       <span class="topbar-buttons">
         <button id="btn-log" type="button">지난 대사</button>
-        <button id="btn-notebook" type="button">사료 수첩 <b id="nb-count">0</b></button>
+        <button id="btn-notebook" type="button">수첩 <b id="nb-count">0</b></button>
       </span>
     </header>
 
@@ -451,7 +468,7 @@ class ScenePlayer {
     Object.assign(this.state.flags, opt.set || {});
     if (line.type === 'question') this.local.question = key;
     else if (!line.group) this.local.choice = key; // 묶음 선택(간직 등)은 '선택=A' 조건의 대상이 아니다
-    this.state.choices[this.scene.id].push({ type: line.type, group: line.group || null, key, text: opt.text });
+    this.state.choices[this.scene.id].push({ scene: this.scene.title, type: line.type, group: line.group || null, key, text: opt.text });
   }
 
   reason(tag) {
@@ -679,8 +696,28 @@ function showSource(line) {
   return openModal(wrap, { closable: false, kind: 'source' });
 }
 
+// 쌓였다는 것만 알린다. 점수가 아니다
+function toast(text) {
+  document.getElementById('toast')?.remove();
+  const t = el('div', { id: 'toast', role: 'status' }, text);
+  $('stage').append(t);
+  setTimeout(() => t.remove(), 2500);
+}
+
+// 수첩 = 발자취(이유 도장 누적, 장면별 선택) + 모은 사료
 function showNotebook() {
-  const list = el('div', { class: 'list' }, el('h2', {}, `사료 수첩 (${state.notebook.length})`));
+  const reasons = Object.values(state.reasons);
+  const stamps = el('div', { class: 'trail-stamps' }, ...meta.reasonTags.map((t) => {
+    const n = reasons.filter((r) => r === t).length;
+    return el('div', { class: n ? '' : 'zero' }, t, el('b', {}, String(n)));
+  }));
+  const rows = Object.entries(state.choices).flatMap(([id, picks]) => picks
+    .filter((c) => c.type === 'choice')
+    .map((c) => el('tr', {}, el('th', {}, c.scene || id), el('td', {}, c.text), el('td', {}, c.group && picks.some((x) => x.type === 'choice' && !x.group) ? '' : state.reasons[id] || ''))));
+  const list = el('div', { class: 'list' },
+    el('h2', {}, '발자취'), stamps,
+    rows.length ? el('table', { class: 'trail' }, ...rows) : el('p', { class: 'empty' }, '아직 고른 것이 없습니다. 선택과 그 이유가 여기에 쌓입니다.'),
+    el('h2', {}, `모은 사료 (${state.notebook.length})`));
   if (!state.notebook.length) list.append(el('p', { class: 'empty' }, '아직 모은 사료가 없습니다.'));
   for (const id of state.notebook) list.append(sourceCard(id));
   openModal(list, { kind: 'source' });
@@ -910,7 +947,7 @@ function showInspect(line) {
 }
 
 // ───────── 장면 재생 ─────────
-async function playScene(scene, st, progress) {
+async function playScene(scene, st, progress, index = 0, total = 1) {
   state = st;
   const p = new ScenePlayer(scene, state);
   backlog = [];
@@ -920,6 +957,8 @@ async function playScene(scene, st, progress) {
   $('more').hidden = true;
   $('caption').textContent = '';
   $('progress').textContent = progress;
+  $('pips').replaceChildren(...Array.from({ length: total }, (_, i) => el('i', { class: i < index ? 'done' : i === index ? 'now' : '' })));
+  $('pips').title = progress;
   $('nb-count').textContent = state.notebook.length;
   $('inspect').hidden = true;
   $('choices').hidden = true;
@@ -941,9 +980,15 @@ async function playScene(scene, st, progress) {
         if (line.sourceId) p.collect(line.sourceId);
         await showSource(line);
         $('nb-count').textContent = state.notebook.length;
+        if (line.sourceId) toast('수첩에 사료 한 장이 들어갔습니다');
         break;
       case 'choice': case 'question': p.pick(line, await showOptions(line)); break;
-      case 'reason': p.reason(await showReason(line)); break;
+      case 'reason': {
+        const tag = await showReason(line);
+        p.reason(tag);
+        toast(`‘${tag}’ 도장이 발자취에 찍혔습니다`);
+        break;
+      }
       case 'direction': direction(line.text); break;
       default: break; // 일기 등 아직 화면이 없는 유형
     }
@@ -987,7 +1032,7 @@ async function boot() {
       state.pos = i;
       saveGame(state); // 장면 시작마다 자동 저장
       const s = scenes[flow[i]];
-      await playScene(s, state, `${meta.cities[s.city].name} · ${s.id} ${s.title} (${i + 1}/${flow.length})`);
+      await playScene(s, state, `${meta.cities[s.city].name} · ${s.id} ${s.title} (${i + 1}/${flow.length})`, i, flow.length);
     }
     state.pos = flow.length;
     saveGame(state);

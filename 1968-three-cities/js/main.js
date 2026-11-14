@@ -32,7 +32,7 @@ async function boot() {
       state.pos = i;
       saveGame(state); // 장면 시작마다 자동 저장
       const s = scenes[flow[i]];
-      await playScene(s, state, `${meta.cities[s.city].name} · ${s.id} ${s.title} (${i + 1}/${flow.length})`);
+      await playScene(s, state, `${meta.cities[s.city].name} · ${s.id} ${s.title} (${i + 1}/${flow.length})`, i, flow.length);
     }
     state.pos = flow.length;
     saveGame(state);

@@ -98,8 +98,28 @@ function showSource(line) {
   return openModal(wrap, { closable: false, kind: 'source' });
 }
 
+// 쌓였다는 것만 알린다. 점수가 아니다
+function toast(text) {
+  document.getElementById('toast')?.remove();
+  const t = el('div', { id: 'toast', role: 'status' }, text);
+  $('stage').append(t);
+  setTimeout(() => t.remove(), 2500);
+}
+
+// 수첩 = 발자취(이유 도장 누적, 장면별 선택) + 모은 사료
 function showNotebook() {
-  const list = el('div', { class: 'list' }, el('h2', {}, `사료 수첩 (${state.notebook.length})`));
+  const reasons = Object.values(state.reasons);
+  const stamps = el('div', { class: 'trail-stamps' }, ...meta.reasonTags.map((t) => {
+    const n = reasons.filter((r) => r === t).length;
+    return el('div', { class: n ? '' : 'zero' }, t, el('b', {}, String(n)));
+  }));
+  const rows = Object.entries(state.choices).flatMap(([id, picks]) => picks
+    .filter((c) => c.type === 'choice')
+    .map((c) => el('tr', {}, el('th', {}, c.scene || id), el('td', {}, c.text), el('td', {}, c.group && picks.some((x) => x.type === 'choice' && !x.group) ? '' : state.reasons[id] || ''))));
+  const list = el('div', { class: 'list' },
+    el('h2', {}, '발자취'), stamps,
+    rows.length ? el('table', { class: 'trail' }, ...rows) : el('p', { class: 'empty' }, '아직 고른 것이 없습니다. 선택과 그 이유가 여기에 쌓입니다.'),
+    el('h2', {}, `모은 사료 (${state.notebook.length})`));
   if (!state.notebook.length) list.append(el('p', { class: 'empty' }, '아직 모은 사료가 없습니다.'));
   for (const id of state.notebook) list.append(sourceCard(id));
   openModal(list, { kind: 'source' });
@@ -329,7 +349,7 @@ function showInspect(line) {
 }
 
 // ───────── 장면 재생 ─────────
-export async function playScene(scene, st, progress) {
+export async function playScene(scene, st, progress, index = 0, total = 1) {
   state = st;
   const p = new ScenePlayer(scene, state);
   backlog = [];
@@ -339,6 +359,8 @@ export async function playScene(scene, st, progress) {
   $('more').hidden = true;
   $('caption').textContent = '';
   $('progress').textContent = progress;
+  $('pips').replaceChildren(...Array.from({ length: total }, (_, i) => el('i', { class: i < index ? 'done' : i === index ? 'now' : '' })));
+  $('pips').title = progress;
   $('nb-count').textContent = state.notebook.length;
   $('inspect').hidden = true;
   $('choices').hidden = true;
@@ -360,9 +382,15 @@ export async function playScene(scene, st, progress) {
         if (line.sourceId) p.collect(line.sourceId);
         await showSource(line);
         $('nb-count').textContent = state.notebook.length;
+        if (line.sourceId) toast('수첩에 사료 한 장이 들어갔습니다');
         break;
       case 'choice': case 'question': p.pick(line, await showOptions(line)); break;
-      case 'reason': p.reason(await showReason(line)); break;
+      case 'reason': {
+        const tag = await showReason(line);
+        p.reason(tag);
+        toast(`‘${tag}’ 도장이 발자취에 찍혔습니다`);
+        break;
+      }
       case 'direction': direction(line.text); break;
       default: break; // 일기 등 아직 화면이 없는 유형
     }

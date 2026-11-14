@@ -44,7 +44,7 @@ export class ScenePlayer {
     Object.assign(this.state.flags, opt.set || {});
     if (line.type === 'question') this.local.question = key;
     else if (!line.group) this.local.choice = key; // 묶음 선택(간직 등)은 '선택=A' 조건의 대상이 아니다
-    this.state.choices[this.scene.id].push({ type: line.type, group: line.group || null, key, text: opt.text });
+    this.state.choices[this.scene.id].push({ scene: this.scene.title, type: line.type, group: line.group || null, key, text: opt.text });
   }
 
   reason(tag) {

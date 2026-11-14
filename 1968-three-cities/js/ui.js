@@ -123,14 +123,19 @@ function showReason(line) {
 async function setEra(next, scene) {
   const app = $('app');
   const flip = (era === '1968' || era === '2026') && era !== next;
-  if (flip) { $('fx').className = 'noise'; await wait(350); }
+  if (flip) await rewind(era, next);
   era = next;
   app.dataset.era = next;
   app.dataset.city = scene.city;
   for (const id of ['bg', 'chars']) $(id).hidden = next !== '1968';
   $('call').hidden = next !== '2026';
-  if (next === '1968') setBg(scene.bg || scene.id, `${scene.id} ${scene.title}`);
-  else {
+  if (next === '1968') {
+    setBg(scene.bg || scene.id, `${scene.id} ${scene.title}`);
+    // 라디오 다이얼: 세 도시가 한 눈금 위에. 바늘은 지금 도시, 장면이 나아가면 조금씩 움직인다
+    const n = Number(scene.id.split('-')[1]) || 3.5;
+    $('dial').style.setProperty('--needle', `${{ PA: 16.7, PR: 50, MX: 83.3 }[scene.city] + (n - 3.5) * 3.2}%`);
+    $('memo-text').textContent = `${(meta.cities[scene.city] || {}).hero || ''}의 기억 · ${scene.id}`;
+  } else {
     const elder = (meta.cities[scene.city] || {}).elder || '';
     $('call-name').textContent = elder;
     $('call-face').replaceChildren(silhouette(elder));
@@ -143,7 +148,23 @@ async function setEra(next, scene) {
     tick();
     recTimer = setInterval(tick, 1000);
   }
-  if (flip) { await wait(350); $('fx').className = ''; }
+  if (flip) { await wait(250); $('fx').className = ''; $('fx').replaceChildren(); }
+}
+
+// 시대 전환: 구술 녹음 테이프를 되감듯 연도가 흐른다
+async function rewind(from, to) {
+  const a = Number(from);
+  const b = Number(to);
+  const year = el('b', {}, String(a));
+  $('fx').replaceChildren(el('div', { class: 'reels' }, el('i'), el('i')), year, el('span', {}, b < a ? '◀◀ 기억을 되감는 중' : '▶▶ 오늘로 돌아오는 중'));
+  $('fx').className = b < a ? 'rewind back' : 'rewind';
+  if (reduced) { year.textContent = String(b); return wait(0); }
+  const steps = 16;
+  for (let i = 1; i <= steps; i++) {
+    await wait(55);
+    year.textContent = String(Math.round(a + ((b - a) * i) / steps));
+  }
+  await wait(350);
 }
 
 function setBg(id, label) {

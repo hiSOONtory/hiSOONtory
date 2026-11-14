@@ -21,7 +21,9 @@ async function boot() {
     return;
   }
   initUI(meta, sources || {});
-  const flow = meta.flow.minimal;
+  // ?scenes=PR-4,MX-2 처럼 주면 그 장면들만 이어서 본다(검수용)
+  const asked = (new URLSearchParams(location.search).get('scenes') || '').split(',').filter((id) => base.scenes[id]);
+  const flow = asked.length ? asked : meta.flow.minimal;
 
   async function run(state) {
     const scenes = (state.example && example ? example : base).scenes;

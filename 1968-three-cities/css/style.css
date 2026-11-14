@@ -234,11 +234,67 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .end-card th, .end-card td { padding: .4em .6em; text-align: left; vertical-align: top; border-bottom: 1px solid #d9dee7; }
 .btn-modern { margin-top: .6em; padding: .4em 1.6em; color: #fff; background: #2f6df6; border: 0; border-radius: 999px; }
 
-/* ── 시대 전환·암전 ── */
+/* ── 라디오 다이얼: 같은 해, 세 도시 ── */
+#dial { position: relative; display: flex; width: 19em; height: 2.3em; overflow: hidden; font: 700 1.05em/1.45 var(--typer); color: var(--ink); background: linear-gradient(#fbf4da, #dccf9f); border: 2px solid var(--ink); border-radius: 5px; box-shadow: inset 0 0 .5em #0006; }
+#dial::after { content: ''; position: absolute; inset: auto 0 0 0; height: .55em; background: repeating-linear-gradient(90deg, var(--ink) 0 1px, transparent 1px 5px); opacity: .6; }
+#dial i { flex: 1; font-style: normal; text-align: center; opacity: .4; }
+[data-city="PA"] #dial i[data-c="PA"], [data-city="PR"] #dial i[data-c="PR"], [data-city="MX"] #dial i[data-c="MX"] { opacity: 1; font-weight: 700; }
+#dial b { position: absolute; top: 0; bottom: 0; left: var(--needle, 50%); width: 3px; margin-left: -1px; background: var(--accent); box-shadow: 0 0 .4em var(--accent); transition: left 1s; }
+[data-era="2026"] #dial, [data-era="1968"] #progress { display: none; }
+
+/* 구술 테이프 표시: 지금 보는 장면은 누군가의 기억이다 */
+#memo { position: absolute; z-index: 2; top: .6em; right: .7em; display: flex; align-items: center; gap: .3em; padding: .15em .8em .15em .4em; font: .6em var(--typer); color: var(--paper); background: #17140fd9; border-radius: 3px; }
+#memo i, .reels i { width: 1.3em; height: 1.3em; border: .28em dotted currentColor; border-radius: 50%; animation: spin 3s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+[data-era="2026"] #memo { display: none; }
+
+/* ── 시대 전환: 테이프 되감기 ── */
 #fx { position: absolute; inset: 0; z-index: 20; pointer-events: none; opacity: 0; }
-#fx.noise { opacity: 1; background: repeating-linear-gradient(0deg, #fff 0 2px, #bbb 2px 3px, #222 3px 5px); animation: noise .7s steps(6); }
-@keyframes noise { 0% { opacity: 0; } 30%, 70% { opacity: 1; background-position: 0 7px; } 50% { background-position: 0 -11px; } 100% { opacity: 0; } }
+#fx.rewind { opacity: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .3em; color: var(--paper); background: var(--ink) repeating-linear-gradient(0deg, #fff1 0 1px, transparent 1px 4px); }
+#fx.rewind b { font: clamp(80px, 20vw, 240px)/1 var(--poster); font-weight: 400; letter-spacing: .04em; }
+#fx.rewind span { font: .8em var(--typer); letter-spacing: .2em; opacity: .8; }
+.reels { display: flex; gap: 3em; font-size: 2.4em; }
+.reels i { animation-duration: .5s; }
+.back .reels i { animation-direction: reverse; }
 #fx.dark { opacity: 1; background: #000; transition: opacity .6s; }
+
+/* ── 도시별 매체 ──
+   파리(기본): 실크스크린 벽보와 활판
+   프라하: 타자기 먹지 사본과 신문
+   멕시코시티: 등사 전단과 옵아트 동심원 */
+[data-city="PR"] { --paper-2: #f3f3ee; --paper: #e3e4dd; --pen: #2a2f73; }
+[data-era="1968"][data-city="PR"] #text,
+[data-era="1968"][data-city="PR"] #dialog[data-kind="narration"] #text { font: 700 .98em/1.7 var(--typer); color: #2a2f73; text-shadow: .6px .4px 0 #2a2f7366; letter-spacing: .02em; }
+[data-era="1968"][data-city="PR"] #dialog[data-kind="narration"] #text { font-weight: 400; }
+[data-era="1968"][data-city="PR"] #dialog::before { background: var(--grain), linear-gradient(90deg, transparent 3.2em, #c2413a55 3.2em calc(3.2em + 2px), transparent 0), var(--paper-2); }
+[data-era="1968"][data-city="PR"] #dialog { padding-left: 4.4em; }
+[data-era="1968"][data-city="PR"] #speaker { left: 4.2em; font: 700 .9em var(--typer); color: var(--ink); background: var(--paper-2); border: 2px solid var(--ink); box-shadow: none; transform: none; text-transform: uppercase; }
+[data-era="1968"][data-city="PR"] #caption { font-family: var(--typer); font-weight: 700; font-size: 1.1em; }
+[data-city="PR"] #titlecard { color: var(--ink); background: var(--grain), var(--paper-2); }
+[data-city="PR"] .tc-date { color: var(--ink); background: none; border-block: 4px double var(--ink); padding: .3em 3em; }
+[data-city="PR"] .tc-place { font-family: var(--press); font-weight: 800; color: var(--ink); text-shadow: none; }
+[data-city="PR"] .tc-title { background: var(--accent); transform: none; }
+[data-city="PR"] #choices button { font: 700 .95em/1.5 var(--typer); color: #2a2f73; background: var(--grain), var(--paper-2); border-left: 2px solid #c2413a88; text-align: left; align-items: flex-start; }
+[data-city="PR"] #choices button::before { top: -.9em; left: 1.4em; width: .8em; height: 2.4em; margin: 0; background: none; border: 3px solid #8a8f98; border-radius: .5em; transform: rotate(8deg); box-shadow: none; }
+[data-city="PR"] #choices b { font: 700 1.8em var(--typer); color: var(--ink); filter: none; }
+[data-city="PR"] #choices b::after { content: ')'; }
+[data-city="PR"] #choices button span { border-top: 1px dashed #2a2f73; }
+
+[data-city="MX"] { --paper-2: #f6efcf; --paper: #eadfb2; --pen: #4b2a7a; }
+[data-era="1968"][data-city="MX"] #text { font: 400 1.12em/1.5 var(--sign); color: #3c2468; } /* 등사 잉크 */
+[data-era="1968"][data-city="MX"] #dialog[data-kind="narration"] #text { font: .92em/1.7 var(--typer); color: #3c2468; }
+[data-era="1968"][data-city="MX"] #dialog::before { background: var(--grain), repeating-linear-gradient(0deg, transparent 0 6px, #3c246809 6px 7px), var(--paper-2); }
+[data-era="1968"][data-city="MX"] #speaker { background: var(--accent); box-shadow: 3px 3px 0 var(--ink); }
+[data-city="MX"] #titlecard { color: var(--ink); background: var(--grain), repeating-radial-gradient(circle at 50% 46%, var(--paper-2) 0 9px, var(--ink) 9px 12px, var(--paper-2) 12px 21px, var(--accent) 21px 24px); }
+[data-city="MX"] .tc-date { position: relative; z-index: 1; margin-bottom: 1.6em; border: 3px solid var(--ink); }
+[data-city="MX"] .tc-place { padding: 0 .3em; color: var(--ink); background: var(--paper-2); text-shadow: none; -webkit-text-stroke: 0; box-shadow: 0 0 0 6px var(--paper-2), 0 0 0 9px var(--ink), 0 0 0 15px var(--paper-2), 0 0 0 18px var(--accent); border-radius: .15em; }
+[data-city="MX"] .tc-title { margin-top: 1.2em; background: var(--accent); box-shadow: 0 0 0 5px var(--paper-2); }
+[data-city="MX"] #choices button { color: #3c2468; }
+[data-city="MX"] #choices button:nth-of-type(3n+1) { background: var(--grain), #f4e58e; }
+[data-city="MX"] #choices button:nth-of-type(3n+2) { background: var(--grain), #f3c6cf; }
+[data-city="MX"] #choices button:nth-of-type(3n) { background: var(--grain), #bfe3c4; }
+[data-city="MX"] #choices b { color: #3c2468; -webkit-text-stroke: 0; text-shadow: 0 0 0 transparent; }
+[data-city="MX"] #choices button span { border-top: 3px solid #3c2468; }
 
 @media (max-aspect-ratio: 1/1) { /* 세로 화면: 깨지지 않을 정도 */
   #call { grid-template-columns: 1fr; grid-template-rows: 1fr auto; }

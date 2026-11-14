@@ -1,10 +1,19 @@
-/* 1968, 세 도시의 학생 — 1968은 판화 포스터, 2026은 밝은 현대 UI */
+/* 1968, 세 도시의 학생
+   1968 장면 = 그해의 인쇄물(활판, 등사 전단, 실크스크린 포스터, 고무도장, 문서철)
+   2026 인터뷰 = 밝은 현대 화상 통화 UI */
 :root {
-  --paper: #efe6d0;
+  --paper: #ece2c9;
+  --paper-2: #f5eedb;
   --ink: #17140f;
   --accent: #d7261e;
+  --pen: #1c3a73;
   --fs: clamp(16px, 1.75vw, 26px);
-  --title-font: 'Black Han Sans', 'IBM Plex Sans KR', 'Malgun Gothic', sans-serif;
+  --poster: 'Black Han Sans', 'Do Hyeon', 'Malgun Gothic', sans-serif;
+  --sign: 'Do Hyeon', 'Black Han Sans', 'Malgun Gothic', sans-serif;
+  --press: 'Nanum Myeongjo', 'Batang', 'AppleMyungjo', serif;
+  --typer: 'Nanum Gothic Coding', 'D2Coding', ui-monospace, monospace;
+  --hand: 'Nanum Pen Script', 'Nanum Myeongjo', cursive;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .2 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 [data-city="PA"] { --accent: #d7261e; }
 [data-city="PR"] { --accent: #1f4fa3; }
@@ -14,76 +23,63 @@
 html, body { margin: 0; height: 100%; }
 body {
   font-family: 'IBM Plex Sans KR', 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
-  font-size: var(--fs);
-  line-height: 1.5;
-  color: var(--ink);
-  background: var(--ink);
-  word-break: keep-all;
+  font-size: var(--fs); line-height: 1.5; color: var(--ink); background: var(--ink); word-break: keep-all;
 }
 button { font: inherit; color: inherit; cursor: pointer; }
 [hidden] { display: none !important; }
-:focus-visible { outline: 3px solid #ffb400; outline-offset: 2px; }
+:focus-visible { outline: 3px solid #ffb400; outline-offset: 3px; }
 #app { height: 100vh; height: 100dvh; position: relative; overflow: hidden; }
 .screen { height: 100%; }
 
-/* ── 타이틀 ── */
-#title {
-  position: relative; display: grid; place-items: center; padding: 16px;
-  background: radial-gradient(#0002 1px, transparent 1.5px) 0 0 / 7px 7px, var(--paper);
-}
-.title-poster { text-align: center; max-width: 720px; }
-.title-kicker { margin: 0; font-size: .8em; letter-spacing: .2em; }
-.title-poster h1 { margin: .1em 0 .2em; font-family: var(--title-font); font-weight: 400; line-height: 1; }
-.title-year { display: block; font-size: clamp(90px, 22vw, 260px); color: #d7261e; text-shadow: .035em .035em 0 var(--ink); }
-.title-sub { display: block; font-size: clamp(30px, 6vw, 72px); }
-.title-cities { display: flex; justify-content: center; gap: .5em; margin: .8em 0 1.2em; }
-.title-cities b { padding: .1em .7em; color: var(--paper); background: var(--accent); }
-.title-buttons { display: flex; justify-content: center; gap: .8em; flex-wrap: wrap; }
-.btn-poster {
-  padding: .5em 1.6em; font-family: var(--title-font); font-size: 1.3em;
-  color: var(--paper); background: var(--ink); border: 3px solid var(--ink); box-shadow: 5px 5px 0 #d7261e;
-}
-.btn-poster.ghost { color: var(--ink); background: var(--paper); }
-.btn-poster:hover { transform: translate(-2px, -2px); }
-.title-note { margin: 1.6em 0 .3em; font-size: .7em; opacity: .7; }
-.title-data { font-size: .7em; }
+/* ── 타이틀: 벽에 붙인 포스터 ── */
+#title { position: relative; display: grid; place-items: center; padding: 16px; background: var(--grain), var(--paper); }
+.title-poster { text-align: center; max-width: 760px; }
+.title-kicker { display: inline-block; margin: 0; padding: .1em 1em; font: .7em var(--typer); letter-spacing: .25em; border-block: 3px double var(--ink); }
+.title-poster h1 { margin: .15em 0 .2em; font-family: var(--poster); font-weight: 400; line-height: .95; }
+.title-year { display: block; font-size: clamp(100px, 24vw, 290px); color: #d7261e; text-shadow: .03em .03em 0 var(--ink); filter: url(#ink); }
+.title-sub { display: inline-block; padding: .05em .5em; font-size: clamp(30px, 6vw, 76px); color: var(--paper); background: var(--ink); transform: rotate(-1.5deg); }
+.title-cities { display: flex; justify-content: center; gap: .6em; margin: 1em 0 1.3em; font-family: var(--sign); }
+.title-cities b { padding: .05em .8em; font-weight: 400; color: var(--paper); background: var(--accent); }
+.title-cities b:nth-child(2) { transform: rotate(1.5deg); }
+.title-buttons { display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; }
+.btn-poster { padding: .35em 1.6em; font-family: var(--poster); font-size: 1.35em; color: var(--paper); background: var(--ink); border: 3px solid var(--ink); box-shadow: 6px 6px 0 #d7261e; }
+.btn-poster.ghost { color: var(--ink); background: var(--paper-2); }
+.btn-poster:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 #d7261e; }
+.title-note { margin: 1.8em 0 .3em; font: .62em var(--typer); opacity: .7; }
+.title-data { font: .62em var(--typer); }
 
-/* ── 플레이 공통 ── */
+/* ── 플레이 공통 뼈대 ── */
 #play { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; }
-#topbar { display: flex; align-items: center; gap: 1em; padding: .35em .8em; font-size: .68em; }
+#topbar { position: relative; z-index: 2; display: flex; align-items: center; gap: 1em; padding: .35em .9em; font-size: .68em; }
 #caption { flex: 1; text-align: center; font-weight: 700; font-size: 1.15em; }
-#progress { opacity: .75; white-space: nowrap; }
+#progress { white-space: nowrap; }
 .topbar-buttons { display: flex; gap: .5em; white-space: nowrap; }
-#topbar button { padding: .25em .8em; background: none; border: 1.5px solid currentColor; border-radius: 3px; }
 #stage { position: relative; overflow: hidden; }
 #stage.shake { animation: shake .45s; }
 @keyframes shake { 20%, 60% { transform: translateX(-8px); } 40%, 80% { transform: translateX(8px); } }
-
-#dialog {
-  position: relative; margin: .9em 1em 1em; padding: .9em 1.2em .7em;
-  min-height: calc(3em + 1.6em + 6px); cursor: pointer; user-select: none;
-}
-#speaker { z-index: 2; position: absolute; top: -.95em; left: 1em; padding: .05em .9em; font-size: .82em; font-weight: 700; }
-#text { position: relative; z-index: 2; margin: 0; max-width: 46em; white-space: pre-wrap; }
-#more { position: absolute; right: .9em; bottom: .4em; font-size: .7em; animation: bob 1s infinite; }
+#dialog { position: relative; isolation: isolate; margin: .9em 1.2em 1em; padding: 1em 1.5em .8em; min-height: calc(3em + 1.8em); cursor: pointer; user-select: none; }
+#speaker { position: absolute; z-index: 2; top: -.95em; left: 1.2em; padding: .05em .9em; font-size: .82em; font-weight: 700; }
+#text { position: relative; z-index: 2; margin: 0; max-width: 44em; white-space: pre-wrap; }
+#more { position: absolute; z-index: 2; right: 1em; bottom: .45em; font-size: .7em; animation: bob 1s infinite; }
 @keyframes bob { 50% { transform: translateY(4px); } }
-#dialog[data-kind="thought"] #text { font-style: italic; }
-#dialog.ph #text { opacity: .55; font-family: ui-monospace, 'D2Coding', monospace; font-size: .88em; }
-#dialog.ph { border-style: dashed !important; }
+#dialog.ph #text { opacity: .55; font: .85em/1.6 var(--typer) !important; color: var(--ink) !important; }
 
-/* ── 1968: 판화 포스터 ── */
+/* ── 1968 ── */
 [data-era="1968"] #play { background: var(--ink); }
-[data-era="1968"] #topbar { color: var(--paper); }
+
+/* 상단: 신문 제호 띠 */
+[data-era="1968"] #topbar { color: var(--ink); background: var(--grain), var(--paper); border-bottom: 5px double var(--ink); }
+[data-era="1968"] #caption { font-family: var(--press); font-weight: 800; font-size: 1.3em; letter-spacing: .02em; }
+[data-era="1968"] #progress { font-family: var(--typer); font-size: .9em; }
+[data-era="1968"] #topbar button { padding: .15em .9em; font-family: var(--sign); font-size: 1.1em; background: var(--paper-2); border: 2px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); }
+[data-era="1968"] #topbar button:hover { background: var(--ink); color: var(--paper); }
+[data-era="1968"] #nb-count { display: inline-block; min-width: 1.5em; margin-left: .2em; font-weight: 400; color: var(--paper); background: var(--accent); border-radius: 50%; text-align: center; }
+
+/* 배경, 인물 */
 #bg { position: absolute; inset: 0; background: var(--paper) center / cover no-repeat; }
 #bg-art, #bg-art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-#bg-label {
-  position: absolute; z-index: 1; top: .6em; left: .6em; padding: .1em .8em;
-  font: .58em ui-monospace, monospace; background: var(--paper); border: 1.5px dashed var(--ink); opacity: .8;
-}
-[data-era="1968"] #stage::after, [data-era="1968"] #dialog::after, #title::after { /* 종이 결 */
-  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; mix-blend-mode: multiply; opacity: .5;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
-}
+#bg-label { position: absolute; z-index: 1; bottom: .5em; left: .6em; padding: .1em .8em; font: .55em var(--typer); background: var(--paper); border: 1.5px dashed var(--ink); opacity: .75; }
+[data-era="1968"] #stage::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; mix-blend-mode: multiply; background: var(--grain); }
 #chars { z-index: 2; position: absolute; inset: auto 0 0 0; height: 78%; display: flex; justify-content: center; gap: 12%; align-items: flex-end; pointer-events: none; }
 .char { position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; transition: transform .2s, filter .2s; filter: brightness(.62) saturate(.6); }
 .char.speaking { filter: none; transform: translateY(-2%); }
@@ -101,39 +97,57 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .char.speaking span { background: var(--accent); }
 
-[data-era="1968"] #dialog { background: var(--paper); border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--accent); }
-[data-era="1968"] #speaker { color: var(--paper); background: var(--ink); font-family: var(--title-font); font-weight: 400; letter-spacing: .05em; transform: rotate(-1.5deg); }
-[data-era="1968"] #dialog { outline: 1.5px solid var(--ink); outline-offset: -9px; padding: 1.1em 1.5em .9em; }
-[data-era="1968"] #dialog[data-kind="thought"] #text { color: #5b4a3a; }
 
-#choices {
-  position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column; justify-content: center; align-items: center;
-  gap: .6em; padding: 1em; background: #17140fa8;
-}
-#choices .prompt { margin: 0 0 .2em; padding: .1em 1em; font-weight: 700; color: var(--paper); background: var(--ink); }
+/* 장면 타이틀 카드: 실크스크린 포스터 */
+#titlecard { position: absolute; inset: 0; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .2em; padding: 1em; text-align: center; cursor: pointer; color: var(--paper); background: var(--grain), var(--accent); animation: card 2.4s both; }
+#titlecard p { margin: 0; }
+.tc-date { padding: .1em 1em; font: 700 .85em var(--typer); letter-spacing: .12em; color: var(--ink); background: var(--paper); }
+.tc-place { font: clamp(40px, 8.5vw, 130px)/1.05 var(--poster); color: var(--paper-2); text-shadow: .04em .04em 0 var(--ink); }
+.tc-title { padding: 0 .7em; font: 1.5em var(--sign); background: var(--ink); transform: rotate(-1.5deg); }
+@keyframes card { 0% { opacity: 0; } 10%, 85% { opacity: 1; } 100% { opacity: 0; } }
+
+/* 대사창: 활판으로 찍은 종이 */
+[data-era="1968"] #dialog::before { content: ''; position: absolute; inset: 0; z-index: 0; background: var(--grain), linear-gradient(var(--paper-2), var(--paper)); filter: url(#rough); }
+[data-era="1968"] #dialog::after { content: ''; position: absolute; inset: 7px -7px -7px 7px; z-index: -1; background: var(--accent); filter: url(#rough); }
+[data-era="1968"] #dialog.ph::before { outline: 2px dashed var(--ink); outline-offset: -8px; }
+[data-era="1968"] #speaker { top: -1em; font: 400 .95em var(--sign); letter-spacing: .06em; color: var(--paper); background: var(--ink); transform: rotate(-2deg); box-shadow: 3px 3px 0 var(--accent); }
+[data-era="1968"] #text { font-family: var(--press); font-weight: 700; font-size: 1.04em; }
+[data-era="1968"] #dialog[data-kind="narration"] #text { font: .92em/1.7 var(--typer); color: #2e2a23; }
+[data-era="1968"] #dialog[data-kind="thought"] #text { font: 1.5em/1.25 var(--hand); color: var(--pen); }
+[data-era="1968"] #dialog[data-kind="thought"] #speaker { font-family: var(--hand); font-size: 1.15em; color: var(--pen); background: var(--paper-2); box-shadow: none; border-bottom: 2px solid var(--pen); }
+[data-era="1968"] #more { color: var(--accent); }
+
+/* 선택지: 벽에 붙인 전단 */
+#choices { position: absolute; inset: 0; z-index: 3; display: flex; flex-wrap: wrap; justify-content: center; align-content: center; align-items: stretch; gap: 1.6em 1.4em; padding: 1.2em; background: #17140fc4; }
+#choices .prompt { flex-basis: 100%; margin: 0; text-align: center; font: 1.2em var(--sign); color: var(--paper); }
 #choices button {
-  width: min(92%, 30em); padding: .55em 1em; text-align: left;
-  background: var(--paper); border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--accent);
+  position: relative; display: flex; flex-direction: column; align-items: center; gap: .3em;
+  width: min(29%, 15em); min-height: 8.6em; padding: 1.5em .9em 1em; text-align: center;
+  font: 1.08em/1.3 var(--sign); background: var(--grain), var(--paper-2); border: 0; box-shadow: 0 .5em 1.2em #000a; transition: transform .15s;
 }
-#choices button:hover, #choices button:focus-visible { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--accent); }
-#choices b { display: inline-block; min-width: 1.5em; margin-right: .6em; text-align: center; color: var(--paper); background: var(--ink); }
-#choices.many { display: grid; grid-template-columns: repeat(2, minmax(0, 20em)); align-content: center; justify-content: center; }
-#choices.many .prompt { grid-column: 1 / -1; justify-self: center; }
-#choices.many button { width: 100%; }
+#choices button::before { content: ''; position: absolute; top: -.6em; left: 50%; width: 4.4em; height: 1.2em; margin-left: -2.2em; background: #e6d48fcc; transform: rotate(-3deg); box-shadow: 0 1px 2px #0004; }
+#choices button:nth-of-type(3n+1) { transform: rotate(-2.2deg); }
+#choices button:nth-of-type(3n+2) { transform: rotate(1.4deg) translateY(.5em); }
+#choices button:nth-of-type(3n) { transform: rotate(-.8deg); }
+#choices button:hover, #choices button:focus-visible { transform: rotate(0) translateY(-.4em) scale(1.03); }
+#choices b { font: 400 2.7em/1 var(--poster); color: var(--accent); filter: url(#ink); }
+#choices button span { padding-top: .4em; border-top: 3px double var(--ink); }
+#choices.many button { width: min(29%, 14em); min-height: 0; padding: 1.1em .8em .7em; font-size: .95em; }
+#choices.many b { font-size: 1.7em; }
 
+/* 조사: 현장 사진에 붉은 색연필로 친 표시 */
 #inspect { position: absolute; inset: 0; z-index: 2; }
-.inspect-head { position: absolute; top: .6em; left: 50%; transform: translateX(-50%); margin: 0; padding: .1em 1em; font-size: .8em; font-weight: 700; color: var(--paper); background: var(--ink); white-space: nowrap; }
-.spot {
-  position: absolute; transform: translate(-50%, -50%); padding: .3em .9em; font-size: .85em; font-weight: 700;
-  background: var(--paper); border: 3px solid var(--ink); border-radius: 2em; box-shadow: 0 0 0 6px #efe6d066;
-}
-.spot::before { content: '● '; color: var(--accent); }
-.spot.seen { opacity: .6; box-shadow: none; }
-.spot.seen::before { content: '✓ '; }
-.inspect-next { position: absolute; right: 1em; bottom: 1em; padding: .3em 1.4em; font-weight: 700; background: var(--paper); border: 3px solid var(--ink); }
+.inspect-head { position: absolute; top: .7em; left: 50%; transform: translateX(-50%) rotate(-1deg); margin: 0; padding: .1em 1.2em; font: .95em var(--sign); color: var(--paper); background: var(--ink); white-space: nowrap; }
+.spot { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: .2em; padding: 0; background: none; border: 0; }
+.spot i { width: 3.2em; height: 3.2em; border: 5px solid var(--accent); border-radius: 48% 52% 55% 45% / 50% 45% 55% 50%; filter: url(#rough); background: #fff3; animation: pulse 1.4s infinite; }
+@keyframes pulse { 50% { transform: scale(1.12); } }
+.spot span { padding: 0 .8em; font: .85em var(--sign); background: #e9dba0; box-shadow: 0 2px 3px #0005; transform: rotate(-2deg); }
+.spot.seen i { animation: none; border-color: var(--ink); opacity: .55; }
+.spot.seen span { opacity: .7; text-decoration: line-through; }
+.inspect-next { position: absolute; right: 1.2em; bottom: 1em; padding: .1em 1.4em; font: 1.1em var(--sign); background: var(--paper-2); border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); }
 .inspect-next.ready { color: var(--paper); background: var(--accent); }
-.compare { position: absolute; inset: 12% 4% 6%; display: grid; grid-template-columns: 1fr 1fr; gap: 3%; }
-.compare div { padding: .4em; font-size: .7em; font-weight: 700; text-align: center; background: var(--paper); border: 3px solid var(--ink); }
+.compare { position: absolute; inset: 14% 4% 6%; display: grid; grid-template-columns: 1fr 1fr; gap: 3%; }
+.compare div { padding: .4em; font: .8em var(--sign); text-align: center; background: var(--paper-2); border: 3px solid var(--ink); }
 
 /* ── 2026: 밝은 현대 UI ── */
 [data-era="2026"] #play { color: #1c2330; background: #eef1f6; }
@@ -178,28 +192,40 @@ button { font: inherit; color: inherit; cursor: pointer; }
 [data-era="2026"] #dialog { background: #fff; border: 1px solid #d9dee7; border-radius: 14px; box-shadow: 0 4px 18px #1c23301a; }
 [data-era="2026"] #speaker { color: #fff; background: #2f6df6; border-radius: 999px; }
 
-/* ── 모달: 사료 카드, 수첩, 지난 대사, 이유 태그 ── */
-#modal { position: absolute; inset: 0; z-index: 10; display: grid; place-items: center; padding: 1em; background: #0009; }
-#modal-box { position: relative; width: min(100%, 34em); max-height: 100%; overflow: auto; padding: 1.2em; background: #fff; border-radius: 10px; }
-#modal-box.source { background: #d8ceb6; border-radius: 0; }
-#modal-box h2 { margin: 0 0 .6em; font-size: 1.05em; }
-.modal-close { position: sticky; bottom: 0; float: right; margin-top: .6em; padding: .2em 1.2em; background: #fff; border: 2px solid var(--ink); }
-.modal-ok { display: block; margin: .9em auto 0; padding: .35em 1.6em; font-weight: 700; color: var(--paper); background: var(--ink); border: 0; }
-.card { margin-bottom: .7em; padding: 1em 1.2em; color: var(--ink); background: var(--paper); border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--accent); }
-.card-kicker { display: flex; gap: .6em; font-size: .68em; font-weight: 700; letter-spacing: .2em; }
-.card-kicker b { letter-spacing: 0; color: #a11; }
-.card-text { margin: .4em 0; font-size: 1.05em; font-weight: 700; }
-.card.pending .card-text { font-weight: 400; font-family: ui-monospace, monospace; font-size: .85em; }
-.card.pending { border-style: dashed; }
-.card-desc, .card-cite { margin: .2em 0 0; font-size: .7em; }
-.card-cite { opacity: .7; }
-.list .log { margin: .35em 0; font-size: .85em; }
-.list .log b { margin-right: .6em; }
-.empty { opacity: .6; }
+
+/* ── 모달: 문서철에서 꺼낸 종이 ── */
+#modal { position: absolute; inset: 0; z-index: 10; display: grid; place-items: center; padding: 1em; background: #000b; }
+#modal-box { position: relative; width: min(100%, 34em); max-height: 100%; overflow: auto; padding: 1.4em; background: var(--grain), var(--paper-2); box-shadow: 0 1em 2.5em #000a; }
+#modal-box.source { background: var(--grain), #c9b98f; } /* 서류 봉투 */
+#modal-box h2 { margin: 0 0 .7em; font: 400 1.3em var(--sign); border-bottom: 3px double var(--ink); }
+.modal-close { position: sticky; bottom: 0; float: right; margin-top: .6em; padding: .05em 1.2em; font-family: var(--sign); background: var(--paper-2); border: 2px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); }
+.modal-ok { display: block; margin: 1.1em auto 0; padding: .15em 1.6em; font: 1.1em var(--sign); color: var(--paper); background: var(--ink); border: 0; box-shadow: 4px 4px 0 var(--accent); }
+
+/* 사료 카드: 클립으로 집은 문서 */
+.card { position: relative; margin: .6em 0 1em; padding: 1.5em 1.4em 1em; color: var(--ink); background: var(--grain), #fbf6e6; box-shadow: 0 3px 8px #0006; transform: rotate(-.6deg); }
+.card::before { content: ''; position: absolute; top: -.7em; left: 1.6em; width: .9em; height: 2.6em; border: 3px solid #8a8f98; border-radius: .5em; }
+.card-kicker { position: absolute; top: .7em; right: .9em; display: flex; gap: .5em; font: 1em var(--poster); color: var(--accent); transform: rotate(4deg); filter: url(#ink); }
+.card-kicker, .card-kicker b { padding: 0 .5em; border: 3px solid var(--accent); font-weight: 400; }
+.card-kicker b { border: 0; padding: 0; }
+.card-text { margin: 1em 0 .5em; font: 700 1.1em/1.6 var(--press); }
+.card.pending .card-text { font: .9em/1.7 var(--typer); }
+.card-desc, .card-cite { margin: .3em 0 0; font: .68em/1.6 var(--typer); }
+.card-cite { padding-top: .4em; border-top: 1px solid #0004; opacity: .8; }
+.list .log { margin: .5em 0; font: 700 .85em var(--press); }
+.list .log b { margin-right: .7em; padding: 0 .5em; font: 400 1em var(--sign); color: var(--paper); background: var(--ink); }
+.empty { font: .8em var(--typer); opacity: .7; }
+
+/* 이유 태그: 고무도장 */
 .reason { text-align: center; }
-.tags { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6em; }
-.tags button { padding: .6em 0; background: #f3f5f9; border: 2px solid #1c2330; border-radius: 8px; font-weight: 700; }
-.tags button:hover { background: #1c2330; color: #fff; }
+.reason h2 { border: 0 !important; font-size: 1.5em !important; }
+.tags { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em .8em; padding: .4em; }
+.tags button { padding: .15em 0; font: 1.35em var(--poster); color: var(--accent); background: none; border: 4px double var(--accent); border-radius: .25em; filter: url(#ink); transition: transform .12s; }
+.tags button:nth-child(odd) { transform: rotate(-4deg); }
+.tags button:nth-child(even) { transform: rotate(3deg); }
+.tags button:nth-child(3n) { color: var(--pen); border-color: var(--pen); }
+.tags button:hover, .tags button:focus-visible { transform: rotate(0) scale(1.12); }
+
+[data-era="2026"] #modal-box:not(.source) { font-family: inherit; background: #fff; border-radius: 12px; }
 
 /* ── 끝 화면(최소판) ── */
 #end { display: grid; place-items: center; padding: 1em; overflow: auto; background: #eef1f6; }
@@ -217,7 +243,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
 @media (max-aspect-ratio: 1/1) { /* 세로 화면: 깨지지 않을 정도 */
   #call { grid-template-columns: 1fr; grid-template-rows: 1fr auto; }
   #progress { display: none; }
-  #choices.many { grid-template-columns: 1fr; }
+  #choices { gap: 1em; }
+  #choices button, #choices.many button { width: 100%; min-height: 0; flex-direction: row; text-align: left; padding: .8em 1em; transform: none !important; }
+  #choices button span { border: 0; padding: 0; }
+  #choices b { font-size: 1.6em; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }

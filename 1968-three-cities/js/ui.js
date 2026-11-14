@@ -201,6 +201,20 @@ function direction(text) {
   // '효과음: …' 과 그 밖의 지시는 맞는 음원·처리가 없으면 조용히 건너뛴다
 }
 
+// 장면 첫머리의 포스터식 타이틀 카드. 2초 뒤 또는 누르면 넘어간다
+function titleCard(scene, caption) {
+  return new Promise((resolve) => {
+    const [date, place] = caption.split(' · ');
+    const card = $('titlecard');
+    card.replaceChildren(el('p', { class: 'tc-date' }, date), el('p', { class: 'tc-place' }, place || ''), el('p', { class: 'tc-title' }, scene.title));
+    card.hidden = false;
+    const done = () => { card.hidden = true; advance = null; resolve(); };
+    advance = done;
+    card.onclick = done;
+    setTimeout(() => { if (!card.hidden && advance === done) done(); }, reduced ? 1200 : 2400);
+  });
+}
+
 // ───────── 대사창 ─────────
 function setDialog(kind, name, text, ph) {
   const d = $('dialog');
@@ -247,7 +261,7 @@ function showOptions(line) {
     const buttons = line.options.map((o) => el('button', {
       type: 'button',
       onclick: () => { box.replaceChildren(); if (box.id === 'choices') box.hidden = true; resolve(o.key); },
-    }, era === '2026' ? null : el('b', {}, o.key), o.text));
+    }, era === '2026' ? null : el('b', {}, o.key), el('span', {}, o.text)));
     box.className = line.options.length > 4 ? 'many' : '';
     box.replaceChildren(...(line.prompt ? [el('p', { class: 'prompt' }, line.prompt)] : []), ...buttons);
     box.hidden = false;
@@ -277,7 +291,7 @@ function showInspect(line) {
           backlog.push({ name: s.name, text: s.text });
           update();
         },
-      }, s.name);
+      }, el('i'), el('span', {}, s.name));
       return b;
     });
     const panels = line.layout === 'compare'
@@ -312,9 +326,13 @@ export async function playScene(scene, st, progress) {
   $('dialog').focus({ preventScroll: true });
 
   let line;
+  let carded = false;
   while ((line = p.next())) {
     switch (line.type) {
-      case 'caption': $('caption').textContent = line.text; break;
+      case 'caption':
+        $('caption').textContent = line.text;
+        if (era === '1968' && !carded) { carded = true; await titleCard(scene, line.text); }
+        break;
       case 'narration': case 'say': case 'thought': case 'result': await showText(line); break;
       case 'inspect': await showInspect(line); break;
       case 'source':

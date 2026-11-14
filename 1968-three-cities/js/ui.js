@@ -1,5 +1,6 @@
 // 화면: 1968 장면, 조사, 선택·이유 태그, 사료 카드, 2026 인터뷰
 import { ScenePlayer } from './engine.js';
+import { sceneArt, figureArt } from './art.js';
 
 const $ = (id) => document.getElementById(id);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -148,18 +149,19 @@ async function setEra(next, scene) {
 function setBg(id, label) {
   const bg = $('bg');
   bg.style.backgroundImage = '';
-  bg.dataset.v = [...id].reduce((a, c) => a + c.charCodeAt(0), 0) % 3; // 장면마다 구성이 조금 다르게
+  $('bg-art').innerHTML = sceneArt(id, id.split('-')[0]);
   $('bg-label').textContent = `배경 자리표시 · ${label || id}`;
   $('bg-label').hidden = false;
   tryImage(`assets/bg/${encodeURIComponent(id)}.webp`, (url) => {
     bg.style.backgroundImage = `url("${url}")`;
+    $('bg-art').replaceChildren();
     $('bg-label').hidden = true;
   });
 }
 
 function silhouette(name) {
   const box = el('div', { class: 'sil' });
-  box.innerHTML = '<svg viewBox="0 0 100 130" aria-hidden="true"><circle cx="50" cy="34" r="22"/><path d="M8 130c0-38 18-58 42-58s42 20 42 58z"/></svg>';
+  box.innerHTML = figureArt(name);
   tryImage(`assets/char/${encodeURIComponent(name)}.webp`, (url) => box.replaceChildren(el('img', { src: url, alt: '' })));
   return box;
 }

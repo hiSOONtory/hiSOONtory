@@ -9,7 +9,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-MODULES = ["engine", "save", "ui", "main"]  # 의존 순서
+MODULES = ["engine", "save", "art", "ui", "main"]  # 의존 순서
 
 html = (ROOT / "index.html").read_text(encoding="utf-8")
 css = (ROOT / "css" / "style.css").read_text(encoding="utf-8")

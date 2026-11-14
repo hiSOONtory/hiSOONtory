@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1968, 세 도시의 학생</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app" data-era="title">
+
+  <section id="title" class="screen">
+    <div class="title-poster">
+      <p class="title-kicker">역사로 탐구하는 현대 세계</p>
+      <h1><span class="title-year">1968</span><span class="title-sub">세 도시의 학생</span></h1>
+      <p class="title-cities"><b data-city="PA">파리</b><b data-city="PR">프라하</b><b data-city="MX">멕시코시티</b></p>
+      <div class="title-buttons">
+        <button id="btn-start" class="btn-poster">시작하기</button>
+        <button id="btn-continue" class="btn-poster ghost" hidden>이어하기</button>
+      </div>
+      <p class="title-note">최소판 미리보기 · PA-I → PA-2 → PA-O</p>
+      <label class="title-data" id="data-toggle" hidden><input type="checkbox" id="chk-example"> PA-2를 양식의 '예시' 시트 대사로 보기</label>
+    </div>
+  </section>
+
+  <section id="play" class="screen" hidden>
+    <header id="topbar">
+      <span id="progress"></span>
+      <span id="caption"></span>
+      <span class="topbar-buttons">
+        <button id="btn-log" type="button">지난 대사</button>
+        <button id="btn-notebook" type="button">사료 수첩 <b id="nb-count">0</b></button>
+      </span>
+    </header>
+
+    <div id="stage">
+      <!-- 1968 장면 -->
+      <div id="bg"><span id="bg-label"></span></div>
+      <div id="chars"></div>
+      <div id="inspect" hidden></div>
+      <div id="choices" hidden></div>
+
+      <!-- 2026 인터뷰 -->
+      <div id="call" hidden>
+        <div id="call-video">
+          <span class="call-live">● 통화 중</span>
+          <div id="call-face"></div>
+          <span id="call-name"></span>
+        </div>
+        <div id="call-side">
+          <div id="rec">
+            <div id="wave" aria-hidden="true"></div>
+            <span id="rec-label">녹음 중 <span id="rec-time">00:00</span></span>
+          </div>
+          <div id="questions"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dialog" role="button" tabindex="0" aria-live="polite" aria-label="대사창. 눌러서 넘기기">
+      <div id="speaker"></div>
+      <p id="text"></p>
+      <span id="more" aria-hidden="true">▼</span>
+    </div>
+  </section>
+
+  <section id="end" class="screen" hidden>
+    <div class="end-card">
+      <h2>최소판은 여기까지입니다</h2>
+      <p>아래는 방금 플레이에서 게임이 기억한 내용입니다. 이 기록이 뒤 장면 조건과 결과지로 이어집니다.</p>
+      <div id="end-summary"></div>
+      <button id="btn-home" class="btn-modern">처음으로</button>
+    </div>
+  </section>
+
+  <div id="modal" hidden>
+    <div id="modal-box" role="dialog" aria-modal="true"></div>
+  </div>
+  <div id="fx" aria-hidden="true"></div>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

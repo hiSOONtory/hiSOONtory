@@ -1,0 +1,162 @@
+{
+ "S01": {
+  "scene": "FR-0",
+  "candidate": "1968년 주요 사건 헤드라인 5개(뉴스 몽타주용)",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S02": {
+  "scene": "PA-1",
+  "candidate": "5월 4일자 파리 신문의 연행 보도(원문 확인 필요)",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S03": {
+  "scene": "PA-2",
+  "candidate": "낙서 \"보도블록 아래, 해변!(Sous les pavés, la plage!)\"",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S04": {
+  "scene": "PA-3",
+  "candidate": "포스터 \"공장, 대학, 단결(Usines, Universités, Union)\" (아틀리에 포퓔레르)",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S05": {
+  "scene": "PA-4",
+  "candidate": "그르넬 협정 주요 내용 요약",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S06": {
+  "scene": "PA-5",
+  "candidate": "드골 5월 30일 라디오 연설 발췌",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S07": {
+  "scene": "PA-6",
+  "candidate": "1968년 6월 총선 결과(의석 수)",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S08": {
+  "scene": "PR-1",
+  "candidate": "체코슬로바키아 공산당 '행동 강령'(1968년 4월) 중 언론·집회 자유 부분",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S09": {
+  "scene": "PR-2",
+  "candidate": "'2000어' 선언 발췌",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S10": {
+  "scene": "PR-3",
+  "candidate": "파리 포스터 1장 + 행동 강령 발췌 1줄을 나란히 놓은 비교 카드",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S11": {
+  "scene": "PR-4",
+  "candidate": "낙서 \"레닌, 깨어나라! 브레즈네프가 미쳤다\"",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S12": {
+  "scene": "PR-5",
+  "candidate": "둡체크 8월 27일 라디오 연설 발췌",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S13": {
+  "scene": "PR-6",
+  "candidate": "1969년 '정상화' 관련 공식 문서 또는 신문 발췌(후보 확인 필요)",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S14": {
+  "scene": "MX-1",
+  "candidate": "바로스 시에라 총장의 7월 30일 발언 발췌(\"오늘은 대학의 애도의 날\")",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S15": {
+  "scene": "MX-2",
+  "candidate": "전국파업위원회 6개 요구안",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S16": {
+  "scene": "MX-3",
+  "candidate": "8월 28일자 신문 보도(원문 확인 필요) ↔ 행진 사진",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S17": {
+  "scene": "MX-4",
+  "candidate": "침묵의 행진 사진 또는 전단(후보 확인 필요)",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S18": {
+  "scene": "MX-5",
+  "candidate": "디아스 오르다스 9월 1일 국정 보고 발췌",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S19": {
+  "scene": "MX-6",
+  "candidate": "10월 3일자 신문 보도(원문 확인 필요) ↔ 엘레나 포니아토프스카 『틀라텔롤코의 밤』 속 증언",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ },
+ "S20": {
+  "scene": "MX-O",
+  "candidate": "2000년대 공개 문서 관련 보도 또는 진상 조사 보고서 요지(후보 확인 필요)",
+  "verified": false,
+  "cite": "",
+  "text": "",
+  "desc": ""
+ }
+}

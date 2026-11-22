@@ -94,7 +94,7 @@
     
 - 🧭 **생기부 점검 현황판 (업무 담당자용)** — 담임 선생님들이 제출한 점검 결과 파일을 한 폴더에 모아 반별 진행 상황과 수정 전후를 한눈에 확인 (설치 없는 HTML 한 장, 외부 전송 없음)
   - [바로가기](https://saenggibu-checker.pages.dev/현황판.html)
-  - [사용설명서](https://saenggibu-checker.pages.dev/사용설명서.html)
+  - [사용설명서](https://saenggibu-checker.pages.dev/현황판_사용설명서.html)
     
 - 🎓 **당신의 입시** — 5등급제 세대 고1~고3 담임을 위한 진학지도 도우미(계속 개발중!)
   - [바로가기](https://hisoontory.github.io/your_ipsi/)

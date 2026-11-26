@@ -117,6 +117,10 @@
 - 📚 **진로 도서 검색기** 무슨 책을 읽어야 할 지 잘 모르겠다면, 검색부터 해봐요!
   - [바로가기](https://hs-books-do1.hisoontory.workers.dev/)
     
+- 👀 **관찰기록** — 쉬는 시간·수업 중에 본 학생 모습을 폰에서 바로 누가기록하고, 선생님 본인 구글시트에 쌓아 행특 쓸 때 꺼내 보는 담임용 도구. 홈 화면에 추가하면 앱처럼 쓸 수 있고, 인터넷이 끊겨도 저장했다가 연결되면 자동 전송돼요. (기록은 본인 구글시트에만 저장)
+  - [바로가기](https://gwanchal.hisoontory.workers.dev/)
+  - [시작하기](https://gwanchal.hisoontory.workers.dev/setup)
+    
 - 🧑‍🏫 **생기부 점검기 (담임용)** — 나이스 엑셀을 넣으면 기재요령 위반·오타·글자수(Byte)를 규칙 기반으로 점검하고, 점검 결과 파일을 저장해 제출 (설치 없는 HTML 한 장, 외부 전송·AI 없음)
   - [바로가기](https://saenggibu-checker.pages.dev/점검기.html)
   - [사용설명서](https://saenggibu-checker.pages.dev/사용설명서.html)

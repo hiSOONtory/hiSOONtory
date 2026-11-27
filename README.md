@@ -86,7 +86,8 @@
 다양한 교육용 도구를 만듭니다.
 
 - 📺 **담임교사 대시보드** — Lively Wallpaper로 바탕화면에 띄우는 시간표·진도·출결·마감 업무·학사일정 대시보드. 받은 zip 파일을 압축 풀지 않고 Lively 창에 끌어다 놓으면 바로 설치돼요!
-  - [바로가기 · 설치 설명서](https://teacher-desk.hisoontory.workers.dev) — 기본판/마감요정 연동판 받기와 그림 설명서가 한 곳에 있어요.
+  - [기본판 받기 (zip)](https://teacher-desk.hisoontory.workers.dev/teacher-desk-lively.zip) · [마감요정 연동판 받기 (zip)](https://teacher-desk.hisoontory.workers.dev/teacher-desk-magam-lively.zip)
+  - [설치 설명서](https://teacher-desk.hisoontory.workers.dev) — 그림 설명서, 마감요정 연동 방법, 잘 안 될 때 점검 도구까지 한 곳에 있어요.
   - 🔄 **업데이트 방법** — 이미 쓰고 있다면 [대시보드_업데이트.bat](https://teacher-desk.hisoontory.workers.dev/대시보드_업데이트.bat)을 받아 두 번 누르세요. 넣어 둔 기록은 그대로 남아요. 마감요정도 같이 쓴다면 “마감요정도 같이 쓰세요?”에 `Y`를 누르면 연동판으로 바뀌어요. ([그림 설명서](https://teacher-desk.hisoontory.workers.dev/업데이트_설명서))
 
 - ⏰ **마감요정** — 깔아만 두세요. 마감요정이 마감이 언젠지 알려드려요!(Brity Messenger 전용)
